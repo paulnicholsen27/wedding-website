@@ -9,7 +9,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'wedding.views.home', name='home'),
     # url(r'^wedding/', include('wedding.foo.urls')),
 
-    url(r'^$', 'mainsite.views.landing', name='landing')
+    url(r'^$', 'mainsite.views.base', name='base'),
+    url(r'^quiz/$', 'mainsite.views.quiz', name='quiz'),
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

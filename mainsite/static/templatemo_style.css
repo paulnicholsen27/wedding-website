@@ -68,13 +68,18 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 #site_title h1 {
+	display: block;
+	height: 50px;
 	margin: 0;
 	padding: 0;
+	font-size: 40px;
+	color: #d07f0b;
+	font-weight: normal;
+
 }
 
 #site_title h1 a {
 	display: block;
-	background: url(images/templatemo_logo.png) no-repeat;
 	width: 255px;
 	height: 50px;
 	margin: 0;
@@ -180,7 +185,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 #m_right {
 	float: right;
-	width: 500px;
+	width: 470px;
 	padding-top: 20px;
 }
 
