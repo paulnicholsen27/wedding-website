@@ -146,6 +146,16 @@ a.more:hover { text-decoration: none; color: #fff; }
 #templatemo_menu ul li a:hover, #templatemo_menu ul li .current { color: #dc6606 }
 #templatemo_menu ul li .last { background: none }
 
+ul.dropdown                         { position: relative; }
+ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; }
+ul.dropdown a:hover		            { color: #000; }
+ul.dropdown a:active                { color: #ffa500; }
+ul.dropdown li a                    { display: inline; padding: 4px 8px; border-right: 1px solid #333;
+	 								  color: #222; }
+ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover                { background: #F3D673; color: black; position: relative; }
+ul.dropdown li.hover a              { color: black; }
 
 #login { float: right; }
 #login a { color: #383838; font-weight: 400 }
@@ -239,3 +249,21 @@ a.more:hover { text-decoration: none; color: #fff; }
 	font-weight: normal;
 	color: #bdbdbd;
 }
+
+.quiz_question, .quiz_answer {
+	color: #333; 
+    font-weight: 
+    normal; 
+    font-family: Georgia, "Times New Roman", Times, serif
+
+}
+
+.quiz_question{
+	font-size: 16px; 
+	margin: 10px 0 10px 0; 
+	padding: 0}
+
+.quiz_answer{
+	font-size: 14px; 
+	margin: 0 0 2px; 
+	padding: 0}
