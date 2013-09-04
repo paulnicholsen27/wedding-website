@@ -17,15 +17,15 @@
     <div id="templatemo_content">
           <ol>
         {% for question in questions %}
-              <li class="quiz_question">{{ question.text }}</li>
+              <li class="quiz_question">{{ question.question.text }}</li>
                   <p class='quiz_answer'>
-                  You said: {{ user_answers.forloop.counter }}<br>
-                  {% for answer in question.answer_set.all %}
+                  You said: {{ question.user_answer.text }}<br>
+                  {% for answer in question.question.answer_set.all %}
                     {% if answer.correct %}
                       The correct answer is: {{answer.text}}<br>
                     {% endif %}
                   {% endfor %}
-              {{ question.result_message }}
+              {{ question.question.result_message }}
               </ul>
           {% endfor %}
           </ol>
@@ -33,7 +33,7 @@
           <input type="submit">
           </form>
           {% if score %}
-          Score:  {{ score }} / {{ questions.count }}
+          Score:  {{ score }} / {{ questions|length }}
           {% endif %}
         <div class="cleaner"></div>
       </div>

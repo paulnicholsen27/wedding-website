@@ -7,7 +7,8 @@
 <meta name="keywords" content="Paul, Nichols, Jason, Olsen, Nicholsen, Wedding," />
 <meta name="description" content="Personal website for the Nicholsen big gay wedding" />
 <link href="/static/templatemo_style.css" rel="stylesheet" type="text/css" />
-
+<script type="text/javascript" src="/static/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="/static/js/menu.js"></script>
 <script language="javascript" type="text/javascript">
 function clearText(field)
 {
@@ -35,12 +36,29 @@ function clearText(field)
     
   <div id="templatemo_menu">
   
-    <ul>
-          <li><a href="#" class="current">Home</a></li>
-          <li><a href="http://www.templatemo.com/page/1" target="_parent">About Us</a></li>
-          <li><a href="http://www.flashmo.com/page/1" target="_parent">Wedding Day</a></li>
-          <li><a href="#">Guest Info</a></li>
-          <li><a href="#" class="last">Contact Us</a></li>
+    <ul class="dropdown">
+          <li><a href="/" class="current">Home</a></li>
+          <li><a href="#">About Us</a>
+            <ul class="sub_menu">
+                <li><a href="#">Trivia</a></li>
+                <li><a href="#">Photos</a></li>
+                <li><a href="#">Our Proposal</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Wedding Day</a>
+            <ul class="sub_menu">
+                <li><a href="#">Ceremony/Reception</a></li>
+                <li><a href="#">Our Wedding Party</a></li>
+                <li><a href="#">After Party</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Guest Info</a>
+            <ul class="sub_menu">
+                <li><a href="#">Map</a></li>
+                <li><a href="#">Lodging</a></li>
+            </ul>
+          </li>
+          <li><a href="mailto:paulandjason27@gmail.com" target="_blank" class="last">Contact Us</a></li>
     </ul>   
      	
 <!--         <div id="login">
@@ -121,9 +139,7 @@ function clearText(field)
      <div id="templatemo_footer">
     
         Copyright © 2013 <a href="https://github.com/pnichols104">Built by Paul Nichols</a> | 
-        Designed by <a href="http://www.templatemo.com/page/1" target="_parent">CSS Templates</a> | 
-        Validate <a href="http://validator.w3.org/check?uri=referer">XHTML</a> &amp; 
-        		 <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>
+        Designed by <a href="http://www.templatemo.com/page/1" target="_parent">CSS Templates</a>
     
     </div> <!-- end of templatemo_footer -->
     

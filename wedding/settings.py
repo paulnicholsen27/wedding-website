@@ -112,6 +112,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     'mainsite/templates',
+    'quiz/templates',
 )
 
 INSTALLED_APPS = (
@@ -126,6 +127,7 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'mainsite',
+    'quiz',
 )
 
 # A sample logging configuration. The only tangible logging
