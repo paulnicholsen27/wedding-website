@@ -17,9 +17,3 @@ class Answer(models.Model):
 	def __unicode__(self):
 		return self.text
 
-class User(models.Model):
-	name = models.CharField(max_length=256)
-	score = models.IntegerField(default=0)
-
-	def __unicode__(self):
-		return self.name

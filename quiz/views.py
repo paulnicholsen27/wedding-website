@@ -1,10 +1,10 @@
 from django.template import loader, RequestContext
 from django.shortcuts import redirect, render_to_response
-from quiz.models import Question, Answer, User
+from quiz.models import Question, Answer
+
 
 def quiz(request):
-	if request.method == "GET":
-		questions = Question.objects.all()		
+	questions = Question.objects.all()		
 	return render_to_response("quiz.html", {'questions':questions}, RequestContext(request))
 		
 

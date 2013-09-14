@@ -6,15 +6,24 @@
 <title>Jason and Paul's Wedding</title>
 <meta name="keywords" content="Paul, Nichols, Jason, Olsen, Nicholsen, Wedding," />
 <meta name="description" content="Personal website for the Nicholsen big gay wedding" />
-<link href="/static/templatemo_style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/static/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="/static/js/menu.js"></script>
+<link rel="stylesheet" href="/static/css/templatemo_style.css"  type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/static/js/base.js"></script>
+
 <script language="javascript" type="text/javascript">
 function clearText(field)
 {
     if (field.defaultValue == field.value) field.value = '';
     else if (field.value == '') field.value = field.defaultValue;
 }
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
 </script>
 
 </head>
@@ -34,40 +43,78 @@ function clearText(field)
         
     </div>
     
-  <div id="templatemo_menu">
-  
-    <ul class="dropdown">
-          <li><a href="/" class="current">Home</a></li>
-          <li><a href="#">About Us</a>
-            <ul class="sub_menu">
-                <li><a href="#">Trivia</a></li>
-                <li><a href="#">Photos</a></li>
-                <li><a href="#">Our Proposal</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Wedding Day</a>
-            <ul class="sub_menu">
-                <li><a href="#">Ceremony/Reception</a></li>
-                <li><a href="#">Our Wedding Party</a></li>
-                <li><a href="#">After Party</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Guest Info</a>
-            <ul class="sub_menu">
-                <li><a href="#">Map</a></li>
-                <li><a href="#">Lodging</a></li>
-            </ul>
-          </li>
-          <li><a href="mailto:paulandjason27@gmail.com" target="_blank" class="last">Contact Us</a></li>
-    </ul>   
-     	
+    <div id="templatemo_menu">
+        <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="#">About Us</a>
+                <ul>
+                    <li><a href="/quiz/">Trivia</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#" class="last">Our Proposal</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Wedding Day</a>
+                <ul>
+                    <li><a href="#">Ceremony/Reception</a></li>
+                    <li><a href="/wedding_party/">Our Wedding Party</a></li>
+                    <li><a href="#" class="last">After Party</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Guest Info</a>
+                <ul>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#" class="last">Lodging</a></li>
+                </ul>
+              </li>
+              <li><a href="mailto:paulandjason27@gmail.com" target="_blank" class="last">Contact Us</a></li>
+        </ul>   
+     
 <!--         <div id="login">
-            <a href="#">Login</a> or <a href="#">Register</a>
-        </div> -->
+            <a id="login_fancy" title="Login" href="#login_form">Login</a> or <a id="newuser_fancy" title="Newuser" href="#newuser_form">Register</a>-->
+        </div> 
         
         <div class="cleaner"></div>
         
     </div> <!-- end of templatemo_menu -->
+  
+    <div style="display:none">
+        {% if form.errors %}
+            <p id="error">{{ error_message }}
+        {% endif %}
+
+        <form id="newuser_form" action="" method="POST">
+            {% csrf_token %}
+
+            <label for="firstname">First name:</label>
+            <input type="text" name="firstname" value="" id="firstname">
+            <label for="lastname">Last name:</label>
+            <input type="text" name="lastname" value="" id="lastname">
+            <label for="email">Email:</label>
+            <input type="text" name="email" value="" id="email">
+            <label for="password">Password:</label>
+            <input type="password" name="password" value="" id="password">
+            <label for="confirm">Re-enter password:</label>
+            <input type="password" name="confirm" value="" id="confirm">
+            <input type="submit" name="newuser" value="Create User" />
+        </form>
+    </div>
+
+    <div style="display:none">
+        {% if form.errors %}
+            <p class="error">{{ error_message }}
+        {% endif %}
+
+        <form id="login_form" action=""  method="POST">
+          {% csrf_token %}
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" value="" id="email">
+            <label for="password">Password:</label>
+            <input type="password" name="password" value="" id="password">
+            <input type="submit" name="login" value="Log In" />
+        </form>
+    </div>
+
     {% block content %}
     <div id="templatemo_middle">
     

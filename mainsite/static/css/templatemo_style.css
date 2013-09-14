@@ -9,7 +9,7 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 1.7em; 
-	background-image: url(images/templatemo_bg1.jpg);
+	background-image: url(/static/images/templatemo_bg1.jpg);
 	background-color: #000000;
 	background-position: top center;
 	background-repeat: no-repeat
@@ -23,7 +23,7 @@ img { border: none; }
 
 h1, h2, h3, h4, h5, h6 { color: #333; font-weight: normal; font-family: Georgia, "Times New Roman", Times, serif }
 h1 { font-size: 28px; margin: 0 0 30px 0; padding: 5px 0; }
-h2 { font-size: 25px; margin: 0 0 20px 0; padding: 10px 0 10px 60px; background: url(images/templatemo_header.png) no-repeat center left }
+h2 { font-size: 25px; margin: 0 0 20px 0; padding: 10px 0 10px 60px; background: url(/static/images/templatemo_header.png) no-repeat center left }
 h3 { font-size: 22px; margin: 0 0 15px; padding: 0; }
 h4 { font-size: 18px; margin: 0 0 15px; padding: 0; }
 h5 { font-size: 16px; margin: 0 0 10px; padding: 0;  }
@@ -37,7 +37,7 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 .h50 { height: 50px }
 .h60 { height: 60px }
 
-a.more { display: block; width: 105px; height: 23px; text-align: center; padding-top: 3px; color: #000; font-weight: normal; background: url(images/templatemo_more.png) }
+a.more { display: block; width: 105px; height: 23px; text-align: center; padding-top: 3px; color: #000; font-weight: normal; background: url(/static/images/templatemo_more.png) }
 a.more:hover { text-decoration: none; color: #fff; }
 
 .float_l { float: left }
@@ -99,7 +99,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin-top: 10px;
 }
 
-#search_box { float: right; width: 205px; height: 33px; margin: 50px 0 0 0; background: url(images/templatemo_search.png) no-repeat; }
+#search_box { float: right; width: 205px; height: 33px; margin: 50px 0 0 0; background: url(/static/images/templatemo_search.png) no-repeat; }
 #search_box form { clear: both; width: 205px; height: 33px; padding: 0; } 
 #searchfield { height: 23px; width: 170px; padding: 5px; color: #fff; background: none; border: none; }
 
@@ -110,7 +110,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 	height: 47px;
 	padding: 25px 50px 0;
 	font-size: 16px;
-	background: url(images/templatemo_menu.png) no-repeat;
+	background: url(/static/images/templatemo_menu.png) no-repeat;
 }
 
 #templatemo_menu ul {
@@ -119,12 +119,15 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	position: relative;
+	display: inline-table;
 }
 
 #templatemo_menu ul li {
 	padding: 0px;
 	margin: 0px;
 	display: inline;
+	float: left;
 }
 
 #templatemo_menu ul li a {
@@ -140,22 +143,51 @@ a.more:hover { text-decoration: none; color: #fff; }
 	font-weight: normal;
 	outline: none;
 	border: none;
-	background: url(images/templatemo_menu_divider.png) center right no-repeat
+	background: url(/static/images/templatemo_menu_divider.png) center right no-repeat
 }
 
-#templatemo_menu ul li a:hover, #templatemo_menu ul li .current { color: #dc6606 }
-#templatemo_menu ul li .last { background: none }
+#templatemo_menu ul li a:hover, 
+#templatemo_menu ul li .current { color: #dc6606 }
 
-ul.dropdown                         { position: relative; }
-ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; }
-ul.dropdown a:hover		            { color: #000; }
-ul.dropdown a:active                { color: #ffa500; }
-ul.dropdown li a                    { display: inline; padding: 4px 8px; border-right: 1px solid #333;
-	 								  color: #222; }
-ul.dropdown li:last-child a         { border-right: none; } /* Doesn't work in IE */
-ul.dropdown li.hover,
-ul.dropdown li:hover                { background: #F3D673; color: black; position: relative; }
-ul.dropdown li.hover a              { color: black; }
+#templatemo_menu ul li .last { 
+	background: none 
+}
+
+#templatemo_menu ul li:hover > ul {
+	display: block; 
+	float: left; 
+	clear: left;
+}
+
+
+#templatemo_menu ul:after {
+		content: ""; 
+		clear: both; 
+		display: block;
+	}
+
+
+	
+#templatemo_menu ul ul {
+	display: none;
+	border-radius: 0px; 
+	padding: 0;
+	position: absolute; 
+	top: 100%;
+}
+#templatemo_menu ul ul li {
+	float: none; 
+	border-top: 1px solid #6b727c;
+	border-bottom: 1px solid #575f6a;
+	position: relative;
+}
+
+#templatemo_menu ul ul li a:hover {
+	background: #4b545f;
+}
+
+
+
 
 #login { float: right; }
 #login a { color: #383838; font-weight: 400 }
@@ -168,7 +200,7 @@ ul.dropdown li.hover a              { color: black; }
 	width: 900px;
 	height: 200px;
 	padding: 15px 50px;
-	background: url(images/templatemo_slider.png) no-repeat;
+	background: url(/static/images/templatemo_slider.png) no-repeat;
 }
 
 #templatemo_middle #middle_img {
@@ -190,13 +222,14 @@ ul.dropdown li.hover a              { color: black; }
 	top: 0;
 	width: 297px;
 	height: 198px;
-	background: url(images/templatemo_frame.png) no-repeat;
+	background: url(/static/images/templatemo_frame.png) no-repeat;
 }
 
 #m_right {
 	float: right;
-	width: 470px;
+	width: 450px;
 	padding-top: 20px;
+	padding-right: 50px;
 }
 
 #m_right h1 { color: #ddd; margin-bottom: 15px  }
@@ -206,13 +239,13 @@ ul.dropdown li.hover a              { color: black; }
 	clear: both;
 	width: 900px;
 	padding: 30px 50px;
-	background: url(images/templatemo_content.png) repeat-y
+	background: url(/static/images/templatemo_content.png) repeat-y
 }
 
 #templatemo_content_bottom {
 	clear: both;
 	height: 13px;
-	background: url(images/templatemo_content_bottom.png) no-repeat
+	background: url(/static/images/templatemo_content_bottom.png) no-repeat
 }
 
 .content_box { clear: both; margin-bottom: 60px }
@@ -234,7 +267,7 @@ ul.dropdown li.hover a              { color: black; }
 .related_art h6 { margin-bottom: 15px }
 .related_art h6 a { font-weight: normal }
 .related_art .ra_img_wrapper { position: relative; float: left; border: 1px solid #CCC; padding: 4px; margin-left: 9px; display: inline-block }
-.related_art .ra_img_wrapper .new { position: absolute; left: -9px; top: 2px; width: 51px; height: 22px; background: url(images/templatemo_frame_02.png) no-repeat }
+.related_art .ra_img_wrapper .new { position: absolute; left: -9px; top: 2px; width: 51px; height: 22px; background: url(/static/images/templatemo_frame_02.png) no-repeat }
 .related_art p { float: right; width: 190px; } 
 
 #templatemo_footer {
@@ -252,8 +285,7 @@ ul.dropdown li.hover a              { color: black; }
 
 .quiz_question, .quiz_answer {
 	color: #333; 
-    font-weight: 
-    normal; 
+    font-weight: normal; 
     font-family: Georgia, "Times New Roman", Times, serif
 
 }
@@ -267,3 +299,37 @@ ul.dropdown li.hover a              { color: black; }
 	font-size: 14px; 
 	margin: 0 0 2px; 
 	padding: 0}
+
+.party_image img{
+	height: 280px;
+	width: 280px;
+	padding: 10px;
+}
+
+.party_name{
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.party_text{
+	padding: 10px;
+}
+
+#wedding_party{
+	font-family: Georgia, "Times New Roman", Times, serif;
+
+}
+
+#wedding_party th{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#wedding_party td{
+	height: 450px;
+	font-size: 14px;
+	text-align: justify;
+}
+.strikeout {text-decoration:line-through;}

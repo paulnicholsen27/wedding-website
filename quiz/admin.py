@@ -1,5 +1,5 @@
 from django.contrib import admin
-from quiz.models import Question, Answer, User
+from quiz.models import Question, Answer
 
 class AnswerInline(admin.TabularInline):
 	model = Answer
@@ -16,4 +16,3 @@ class UserAdmin(admin.ModelAdmin):
 
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Answer, AnswerAdmin)
-admin.site.register(User, UserAdmin)
