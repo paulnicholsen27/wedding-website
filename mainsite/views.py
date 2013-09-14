@@ -51,6 +51,8 @@ def base(request):
 def wedding_party(request):
 	return render_to_response("weddingparty.html", {}, RequestContext(request))
 
+def location(request):
+	return render_to_response("location.html", {}, RequestContext(request))
 
 # def login(request):
 # 	response_dict = {}
