@@ -18,23 +18,27 @@
           <ol>
         {% for question in questions %}
               <li class="quiz_question">{{ question.question.text }}</li>
-                  <p class='quiz_answer'>
-                  You said: {{ question.user_answer.text }}<br>
+                  <div class='quiz_answer'>
+                  You said: <span class="user_answer">{{ question.user_answer.text }}</span><br>
                   {% for answer in question.question.answer_set.all %}
                     {% if answer.correct %}
-                      The correct answer is: {{answer.text}}<br>
+                      {% if answer.text == question.user_answer.text %}
+                        <p class='right_answer'>Correct!</p>
+                      {% else %}
+                        The correct answer is: <span class="right_answer">{{answer.text}}</span><br>
+                      {% endif %}
                     {% endif %}
                   {% endfor %}
-              {{ question.question.result_message }}
+              <p class="result_message">{{ question.question.result_message }}</p>
+            </div>
               </ul>
           {% endfor %}
           </ol>
-          Name: <input type='text' name="name">
-          <input type="submit">
+
           </form>
-          {% if score %}
+<!--           {% if score %}
           Score:  {{ score }} / {{ questions|length }}
-          {% endif %}
+          {% endif %} -->
         <div class="cleaner"></div>
       </div>
       <div id="templatemo_content_bottom"></div>

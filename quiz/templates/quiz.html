@@ -22,18 +22,15 @@
             <li class="quiz_question">{{ question.text }}</li>
                 <ul class='quiz_answer'>
                 {% for answer in question.answer_set.all %}
-                <input type='radio' name="{{question.pk}}" id="answer{{ forloop.counter }}" value="{{ answer.id }}"/>
-                <label for="answer{{ forloop.counter}}">{{answer.text}}</label><br>
+                <input id='{{answer.pk}}' type='radio' name="{{question.pk}}"  value="{{ answer.id }}"/>
+                <label for='{{ answer.pk }}'>{{answer.text}}</label><br>
                 {% endfor %}
             </ul>
         {% endfor %}
         </ol>
-        Name: <input type='text' name="name">
-        <input type="submit" name="quiz_submit">
+        <button id='quiz_submit' type="submit" name="quiz_submit"><span>Judge Me!</span></button>
         </form>
-        {% if score %}
-        Score:  {{ score }}
-        {% endif %}
+
     	<div class="cleaner"></div>
     </div>
     <div id="templatemo_content_bottom"></div>

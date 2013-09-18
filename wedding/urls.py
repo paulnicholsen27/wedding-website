@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^results/$', 'quiz.views.results', name='results'),
     url(r'^wedding_party/$', 'mainsite.views.wedding_party', name='wedding_party'),
     url(r'^location/$', 'mainsite.views.location', name='location'),
-    url(r'^proposal/$', 'mainsite.views.proposal', name='proposal'),
+    url(r'^story/$', 'mainsite.views.story', name='story'),
     # url(r'^login/$', 'mainsite.views.base', name='login'),
     # url(r'^newuser/$', 'mainsite.views.base', name='newuser'),
     # Uncomment the admin/doc line below to enable admin documentation:

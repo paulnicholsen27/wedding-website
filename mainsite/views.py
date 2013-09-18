@@ -54,6 +54,8 @@ def wedding_party(request):
 def location(request):
 	return render_to_response("location.html", {}, RequestContext(request))
 
+def story(request):
+	return render_to_response("story.html", {}, RequestContext(request))
 # def login(request):
 # 	response_dict = {}
 # 	email = request.POST.get('email', False)

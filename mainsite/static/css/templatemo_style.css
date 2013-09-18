@@ -283,7 +283,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 	color: #bdbdbd;
 }
 
-.quiz_question, .quiz_answer {
+.quiz_question, .quiz_answer .result_message .correct{
 	color: #333; 
     font-weight: normal; 
     font-family: Georgia, "Times New Roman", Times, serif
@@ -292,7 +292,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 .quiz_question{
 	font-size: 16px; 
-	margin: 10px 0 10px 0; 
+	margin: 20px 30px 20px 0px; 
 	padding: 0}
 
 .quiz_answer{
@@ -300,6 +300,21 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin: 0 0 2px; 
 	padding: 0}
 
+.right_answer{
+	font-weight: bold;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	}
+
+.user_answer{
+	color: red;
+	font-weight: bold,
+}
+
+.result_message{
+	font-size: 14px;
+	font-style: italic;
+}
 .party_image img{
 	height: 280px;
 	width: 280px;
@@ -333,3 +348,14 @@ a.more:hover { text-decoration: none; color: #fff; }
 	text-align: justify;
 }
 .strikeout {text-decoration:line-through;}
+
+.story {
+	font-size: 16px;
+	text-align: justify;
+	padding: 5px 45px 5px 45px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#quiz_submit{
+	
+}
