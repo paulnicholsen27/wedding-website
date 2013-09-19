@@ -17,3 +17,8 @@ class Answer(models.Model):
 	def __unicode__(self):
 		return self.text
 
+
+class Result(models.Model):
+	name = models.CharField(max_length=256)
+	date_taken = models.DateField(auto_now_add=True)
+	score = models.IntegerField()

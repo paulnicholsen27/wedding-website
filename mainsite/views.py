@@ -56,6 +56,7 @@ def location(request):
 
 def story(request):
 	return render_to_response("story.html", {}, RequestContext(request))
+
 # def login(request):
 # 	response_dict = {}
 # 	email = request.POST.get('email', False)

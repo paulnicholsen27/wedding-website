@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+
+  {% block content %}
+    <div id="templatemo_middle">
+    
+    	<div id="middle_img"><iframe width="285" height="186" src="//www.youtube.com/embed/HrLEQmMrRFw?rel=0&start=4&showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+        
+        <div id="m_right">
+	        <h1>See who knows us best!</h1>
+            <p>And who is dead to us.</p>
+          	
+		    </div>
+    
+    </div>
+    
+    <div id="templatemo_content">
+          <table id="high_scores">
+            <tr>
+              <th>Name</th>
+              <th>Score</th>
+              <th>Date</th>
+            </tr>
+        {% for score in scores %}
+          <tr>
+            <td>{{ score.name }}</td>
+            <td>{{ score.score }}%</td>
+            <td>{{ score.date_taken }}</td>
+          </tr> 
+        {% endfor %}
+          </table>
+
+
+        <div class="cleaner"></div>
+      </div>
+      <div id="templatemo_content_bottom"></div>
+    {% endblock %}

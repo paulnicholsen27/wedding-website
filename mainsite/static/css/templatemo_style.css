@@ -311,6 +311,11 @@ a.more:hover { text-decoration: none; color: #fff; }
 	font-weight: bold,
 }
 
+.error{
+	color: red;
+	font-size: 14px;
+	margin: 0 20px 0 0;
+}
 .result_message{
 	font-size: 14px;
 	font-style: italic;
@@ -355,7 +360,20 @@ a.more:hover { text-decoration: none; color: #fff; }
 	padding: 5px 45px 5px 45px;
 	font-family: Georgia, "Times New Roman", Times, serif;
 }
+#high_scores{
+	margin-right: auto;
+	margin-left: auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#high_scores th{
+	font-size: 18px;
+	width: 100px;
+	padding-bottom: 10px;
+}
 
-#quiz_submit{
-	
+#high_scores td{
+	font-size: 16px;
+	text-align: center;
+	padding-bottom: 5px;
+	width: auto;
 }

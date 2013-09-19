@@ -17,17 +17,29 @@
     <div id="templatemo_content">
         <form action="/results/" method="post">
         {% csrf_token %}
+        {% if errors.empty_question %}
+            <div class='error'>{{ errors.empty_question }}</div>
+        {% endif %}
         <ol>
     	{% for question in questions %}
             <li class="quiz_question">{{ question.text }}</li>
                 <ul class='quiz_answer'>
                 {% for answer in question.answer_set.all %}
-                <input id='{{answer.pk}}' type='radio' name="{{question.pk}}"  value="{{ answer.id }}"/>
-                <label for='{{ answer.pk }}'>{{answer.text}}</label><br>
+                    {% if answer.pk in chosen_answers %}
+                        <input id='{{answer.pk}}' type='radio' name="{{question.pk}}"  value="{{ answer.id }}" checked/>
+                        <label for='{{ answer.pk }}'>{{answer.text}}</label><br>
+                    {% else %}
+                        <input id='{{answer.pk}}' type='radio' name="{{question.pk}}"  value="{{ answer.id }}"/>
+                        <label for='{{ answer.pk }}'>{{answer.text}}</label><br>
+                    {% endif %}
                 {% endfor %}
             </ul>
         {% endfor %}
         </ol>
+        {% if errors.no_name %}
+            <div class='error'>{{ errors.no_name }}</div>
+        {% endif %}
+        Name: <input id='name' name='name' type='text' value="{{ name }}">
         <button id='quiz_submit' type="submit" name="quiz_submit"><span>Judge Me!</span></button>
         </form>
 
