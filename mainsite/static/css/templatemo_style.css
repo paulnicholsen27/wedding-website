@@ -131,8 +131,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 #templatemo_menu ul li a {
-	float: left;
-	display: block;
+/*	float: left;
+*/	display: block;
 	height: 27px;
 	padding: 0 30px;
 	margin: 0;
@@ -143,7 +143,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 	font-weight: normal;
 	outline: none;
 	border: none;
-	background: url(/static/images/templatemo_menu_divider.png) center right no-repeat
+	background: url(/static/images/templatemo_menu_divider.png) center right no-repeat;
+	position: absolute;
 }
 
 #templatemo_menu ul li a:hover, 

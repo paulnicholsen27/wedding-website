@@ -17,8 +17,8 @@
     <div id="templatemo_content">
         <form action="/results/" method="post">
         {% csrf_token %}
-        {% if errors.empty_question %}
-            <div class='error'>{{ errors.empty_question }}</div>
+        {% if errors %}
+            <div class='error'>Make sure you've answered all the questions! (Hint: You didn't.)</div>
         {% endif %}
         <ol>
     	{% for question in questions %}

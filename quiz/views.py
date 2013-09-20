@@ -10,11 +10,15 @@ def quiz(request, errors=None, answers=None, name=''):
 		
 
 def results(request):
-	errors = {'test':'test'}
+	errors = {}
 	if request.method == "GET":
 		return redirect("/quiz/")
 	else:
+		print request.POST
 		try:
+			name = request.POST['name']
+			if name == '':
+				errors['no_name'] = "This is literally the easiest question on the page."
 			questions_objects = Question.objects.all()		
 			questions = [{'question' : question, 
 						  'user_answer' : Answer.objects.get(pk=request.POST[str(question.pk)])} for question in questions_objects]
@@ -31,9 +35,19 @@ def results(request):
 				score_message = "Not bad, but you could do better.  Maybe spend some more time with the boys.  Perhaps take them out to a fancy dinner.  Your treat."
 			else:
 				score_message = "Wow.  Have you ever even met Paul and Jason?  Or did you just let a blind monkey take the quiz for you?"
-			name = request.POST.get('name')
+			name = request.POST['name']
+			if name == '':
+				errors['no_name'] = "This is literally the easiest question on the page."
 			r = Result(name=name, score=score_percentage)
 			r.save()
+			
+		except KeyError:
+			errors['empty_question'] = True
+		if errors:
+			question_keys = [str(question.pk) for question in Question.objects.all()]
+			answers = [int(request.POST[key]) for key in question_keys if request.POST.get(key) != None]
+			return quiz(request, errors=errors, answers=answers, name=name)
+		else:
 			return render_to_response("results.html", 
 				{'score' : score, 
 				 'score_percentage' : score_percentage,
@@ -42,15 +56,6 @@ def results(request):
 				 # 'user_answers' : user_answers,
 				 }, 
 				 RequestContext(request))
-		except KeyError:
-			question_keys = [str(question.pk) for question in Question.objects.all()]
-			answers = [int(request.POST[key]) for key in question_keys if request.POST.get(key) != None]
-			if len(question_keys) != len(answers):
-				errors['empty_question'] = "Make sure you've answered all the questions! (Hint: You didn't.)"
-			name = request.POST.get('name', None)
-			if not name:
-				errors['no_name'] = "This is literally the easiest question on the page."
-			return quiz(request, errors=errors, answers=answers, name=name)
 
 
 def high_scores(request):
