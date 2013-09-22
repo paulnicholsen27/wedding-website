@@ -1,6 +1,5 @@
 from django.db import models
-
-# Create your models here.
+from django.forms import ModelForm
 
 class User(models.Model):
 	name = models.CharField(max_length=256)
@@ -8,3 +7,11 @@ class User(models.Model):
 
 	def __unicode__(self):
 		return self.name
+
+class Message(models.Model):
+	name = models.CharField(max_length=256)
+	message = models.TextField()
+	response = models.TextField(blank=True, null=True)
+	date = models.DateTimeField(auto_now_add=True)
+
+	

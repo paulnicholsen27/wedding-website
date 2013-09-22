@@ -20,7 +20,7 @@ $(function(){
 
 
 
-$("#login_fancy").fancybox({
+$("#guest_submit").fancybox({
 	'scrolling'	: true,
 	helpers : {
 		title : null
@@ -28,25 +28,31 @@ $("#login_fancy").fancybox({
 
 });
 
-$("#login_form").bind("submit", function(){
-	console.log("login submitted");
-	$.fancybox.showActivity();
+$(document).ready(function(){
+	$("#message_form").on("submit", function(){
 
-	$.ajax({
-		type: "POST",
-		cache: false,
-		url: "/login/",
-		data: $(this).serializeArray(),
-		success: function(data){
-			$.fancybox(data);
-		} 
+		if ($("#guest_name").val().length < 1 || $("#guest_message").val().length < 1) {
+		    $("#guest_error").show();
+		    $.fancybox.resize();
+		    return false;
+		}
+		else{
+		$.fancybox.showActivity();
+		$.ajax({
+			type: "POST",
+			cache: false,
+			url: "/guestbook/",
+			data: $(this).serializeArray(),
+			success: function(data){
+				$.fancybox(data);
+			} 
 
 
+		});
+		return false;
+	}
 	});
-	return false;
-
-});
-
+})
 
 
 
