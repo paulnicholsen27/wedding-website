@@ -17,9 +17,6 @@ $(function(){
 });
 
 
-
-
-
 $("#guest_submit").fancybox({
 	'scrolling'	: true,
 	helpers : {
@@ -36,7 +33,7 @@ $(document).ready(function(){
 		    $.fancybox.resize();
 		    return false;
 		}
-		else{
+
 		$.fancybox.showActivity();
 		$.ajax({
 			type: "POST",
@@ -50,36 +47,49 @@ $(document).ready(function(){
 
 		});
 		return false;
-	}
+
 	});
 })
 
+$(document).ready(function(){
+	time_units = ["days", "hours", "minutes", "seconds", "milliseconds"];
+	$("#clock").on("click", function(){
+	})
 
 
+var current_date = new Date().getTime();
+var target_date = new Date("September 27, 2014 16:30:00").getTime();
+var days, hours, minutes, seconds, milliseconds;
+var countdown = document.getElementById("countdown");
+
+setInterval(function(){
+	var milliseconds_left = target_date = current_date;
+	countdown.innerHTML = milliseconds_left;
+}, 1);
+	console.log(milliseconds_left);
+})
+// $("#newuser_fancy").fancybox({
+// 	'scrolling'	: 'no',
+// 	helpers : {
+// 		title : null
+// 	}
+// });
+
+// $("#newuser_form").bind("submit", function(){
+
+// 	$.fancybox.showActivity();
+
+// 	$.ajax({
+// 		type: "POST",
+// 		cache: false,
+// 		url: "/data/new_user.html",
+// 		data: $(this).serializeArray(),
+// 		success: function(data){
+// 			$.fancybox(data);
+// 		} 
 
 
-$("#newuser_fancy").fancybox({
-	'scrolling'	: 'no',
-	helpers : {
-		title : null
-	}
-});
+// 	});
+// 	return false;
 
-$("#newuser_form").bind("submit", function(){
-
-	$.fancybox.showActivity();
-
-	$.ajax({
-		type: "POST",
-		cache: false,
-		url: "/data/new_user.html",
-		data: $(this).serializeArray(),
-		success: function(data){
-			$.fancybox(data);
-		} 
-
-
-	});
-	return false;
-
-});
+// });

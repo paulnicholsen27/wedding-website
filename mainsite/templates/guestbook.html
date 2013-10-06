@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+  {% block content %}
+    <div id="templatemo_middle">
+    
+    	<div id="middle_img"><img class="middle_img" src="/static/images/paul_jason_moochie.jpg" alt="Gross" /></div>
+        
+        <div id="m_right">
+	        <h1>Our Guestbook</h1>
+            <p>Tell us how wonderful we are.</p>  
+            <p>It's OK, we don't get tired of hearing it.</p>
+          	
+		    </div>
+    
+    </div>
+        <div id="templatemo_content">
+      <div class='container'><a id='guest_submit' href='#message_form'>Leave us a message!</a></div>
+      
+      <div> 
+        <form id='message_form' action="/guestbook/" method="post">
+        <div id='guest_error'>
+          <p class='error'>Make sure you fill out all fields!</p>
+        </div>
+          {% csrf_token %}
+          <p>
+            <label for="guest_name">Name: </label>
+            <input type="text" id="guest_name" name="name"/>
+          <p>
+            <label for "guest_message">Message: </label>
+            <input type="textarea" id="guest_message" name="message"/>
+          </p>
+          <input type="submit"/>
+        </form>
+      </div>
+      
+      <div class='guestbook'>
+        <hr>
+      {% for message in messages %}
+      <div class='guestbook_message'>
+        <div class='message_header'>
+          <span class='message_sender'>{{message.name}} wrote:</span>
+          <span class='message_date'>{{message.date}}</span>
+          </div>
+        <div class='message_body'>
+          {{message.message}}
+        </div>
+        {% if message.response %}
+        <div class='message_response'>
+          ({{message.response}})
+        </div>
+        {% endif %}
+        {% if not forloop.last %}
+          <hr>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+
+        <div class="cleaner"></div>
+      </div>
+      <div id="templatemo_content_bottom"></div>
+    {% endblock %}

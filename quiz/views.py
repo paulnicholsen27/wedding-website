@@ -28,7 +28,8 @@ def results(request):
 					score += 1
 			# for question in questions:
 			# 	user_answers[question] = Answer.objects.get(pk=question.pk).text
-			score_percentage = int(float(score) * 100 / len(questions))
+			score_percentage = int(round(float(score) * 100 / len(questions)))
+			print "Score {0}, # of questions: {1}, Percent: {2}".format(score, len(questions), score_percentage)
 			if score_percentage >= 80:
 				score_message = "Great job!  Looks you know Paul and Jason pretty well!  Or you cheated."
 			elif score_percentage >= 60:
