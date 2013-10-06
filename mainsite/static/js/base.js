@@ -57,16 +57,27 @@ $(document).ready(function(){
 	})
 
 
-var current_date = new Date().getTime();
+var current_date;
 var target_date = new Date("September 27, 2014 16:30:00").getTime();
 var days, hours, minutes, seconds, milliseconds;
 var countdown = document.getElementById("countdown");
-
+if(countdown){
 setInterval(function(){
-	var milliseconds_left = target_date = current_date;
-	countdown.innerHTML = milliseconds_left;
+	current_date = new Date().getTime();
+	var milliseconds = target_date - current_date;
+	var days = Math.floor(milliseconds / 1000 / 60 / 60 / 24);
+	milliseconds -= (days * 1000 * 60 * 60 *24);
+	hours = Math.floor(milliseconds / 1000 / 60 / 60);
+	milliseconds -= (hours * 1000 * 60 * 60);
+	minutes = Math.floor(milliseconds / 1000 / 60);
+	milliseconds -= (minutes * 1000 * 60);
+	seconds = Math.floor(milliseconds / 1000);
+	milliseconds -= (seconds * 1000)
+
+	countdown.innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds";
+
 }, 1);
-	console.log(milliseconds_left);
+}
 })
 // $("#newuser_fancy").fancybox({
 // 	'scrolling'	: 'no',
