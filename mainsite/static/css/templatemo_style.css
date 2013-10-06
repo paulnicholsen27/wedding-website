@@ -114,8 +114,9 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 #templatemo_menu ul {
-	float: left;
-	width: 800px;
+	z-index: 1001;
+/*	float: left;
+*/	width: auto;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -131,20 +132,20 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 #templatemo_menu ul li a {
-	float: left;
+	float: none;
 	display: block;
 	height: 27px;
 	padding: 0 30px;
 	margin: 0;
 	font-size: 16px;
-	text-align: center;
+	text-align: left;
 	text-decoration: none;
 	color: #383838;	
 	font-weight: normal;
 	outline: none;
 	border: none;
-	background: url(/static/images/templatemo_menu_divider.png) center right no-repeat;
-}
+/*	background: url(/static/images/templatemo_menu_divider.png) center right no-repeat;
+*/}
 
 #templatemo_menu ul li a:hover, 
 #templatemo_menu ul li .current { color: #dc6606 }
@@ -174,6 +175,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 	padding: 0;
 	position: absolute; 
 	top: 100%;
+	background: #f8f8f8;
+
 }
 #templatemo_menu ul ul li {
 	float: none; 
@@ -183,10 +186,19 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 #templatemo_menu ul ul li a:hover {
-	background: #4b545f;
 }
 
+#templatemo_menu ul ul:last-child {
+/*    border:1px solid red;
+*/    -webkit-border-bottom-left-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding:2px;t
 
+}
 
 
 #login { float: right; }
