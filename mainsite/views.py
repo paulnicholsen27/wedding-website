@@ -58,8 +58,7 @@ def location(request):
 def story(request):
 	return render_to_response("story.html", {}, RequestContext(request))
 
-def photo_album(request):
-	return render_to_response("photo_album.html", {}, RequestContext(request))
+
 
 def guestbook(request):
 	messages = Message.objects.all().order_by('-date')
