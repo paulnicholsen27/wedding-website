@@ -339,38 +339,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 	font-size: 14px;
 	font-style: italic;
 }
-.party_image img{
-	height: 280px;
-	width: 280px;
-	padding: 10px;
-}
 
-.party_name{
-	font-weight: bold;
-	padding: 10px;
-	text-align: center;
-	font-size: 16px;
-}
-
-.party_text{
-	padding: 10px;
-}
-
-#wedding_party{
-	font-family: Georgia, "Times New Roman", Times, serif;
-
-}
-
-#wedding_party th{
-	font-size: 18px;
-	font-weight: bold;
-}
-
-#wedding_party td{
-	height: 450px;
-	font-size: 14px;
-	text-align: justify;
-}
 .strikeout {text-decoration:line-through;}
 
 .story {
@@ -495,3 +464,60 @@ a.more:hover { text-decoration: none; color: #fff; }
 #guest_error{
 	display:none;
 }
+
+/*wedding_party*/
+
+.wedding_party_container{
+/*border:2px solid blue;*/
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.wedding_party_member{
+	float:left;
+	width:300px;
+	height: auto;
+	font-size: 14px;
+	padding: 10px 0;
+}
+
+.wedding_party_header{
+	font-size: 18px;
+	font-weight: bold;
+	clear: both;
+	text-align: center;
+}
+
+.wedding_party_row{
+	clear: both;
+	text-align: center;
+/*	margin-left: auto;
+	margin-right: auto;
+	width: auto;*/
+}
+
+.wedding_party_row_contents{
+	display: inline-block;
+}
+
+.party_image img{
+	height: 270px;
+	width: 270px;
+	padding: 10px;
+	text-align: center;
+}
+
+.party_name{
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.party_text{
+	margin: 10px 22px 5px 22px;
+	text-align: justify;
+}
+
+/*.wedding_party_row_contents{
+	margin-left: auto;
+	margin
+}*/
