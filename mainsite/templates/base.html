@@ -8,10 +8,9 @@
 <meta name="description" content="Personal website for the Nicholsen big gay wedding" />
 <link rel="stylesheet" href="/static/css/templatemo_style.css"  type="text/css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="/static/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="/static/js/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/static/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 <script type="text/javascript" src="/static/js/base.js"></script>
-
 <script language="javascript" type="text/javascript">
 function clearText(field)
 {
@@ -131,12 +130,33 @@ function clearText(field)
     <div id="templatemo_content">
     	
         <div class="content_box">
-            <div id="countdown_container">
-        <h1>Countdown until the main event!</h1>
-            <div id="countdown"><h3></h3></div>
+
+        <div id="countdown_container">
+            <h2>Time until <span id='wedding_date'>September 27, 2014, 4:30pm!</span></h2>
+            <div id='countdown'>
+                <div class='time_container'>
+                    <div id='days'></div>
+                    <div class='time_label'>Days</div>
+                </div>
+                <div class='time_container'>
+                    <div id='hours'></div>
+                    <div class='time_label'>Hours</div>
+                </div>
+                <div class='time_container'>
+                    <div id='minutes'></div>
+                    <div class='time_label'>Minutes</div>
+                </div>
+                <div class='time_container'>    
+                    <div id='seconds'></div>
+                    <div class='time_label'>Seconds</div>
+                </div>
+                <div class='time_container'>    
+                    <div id='milliseconds'></div>
+                    <div class='time_label'>Milliseconds</div>
+                </div>
+            </div>
         </div>
-        </div>
-        
+
         <div class="content_box last">
         
             <div class="col_w340">

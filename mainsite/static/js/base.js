@@ -61,6 +61,11 @@ var current_date;
 var target_date = new Date("September 27, 2014 16:30:00").getTime();
 var days, hours, minutes, seconds, milliseconds;
 var countdown = document.getElementById("countdown");
+// var days_div = document.getElementById("days");
+// var hours_div = document.getElementById("hours");
+// var minutes_div = document.getElementById("minutes");
+// var seconds_div = document.getElementById("seconds");
+// var milliseconds_div = document.getElementById("milliseconds")
 if(countdown){
 setInterval(function(){
 	current_date = new Date().getTime();
@@ -73,8 +78,11 @@ setInterval(function(){
 	milliseconds -= (minutes * 1000 * 60);
 	seconds = Math.floor(milliseconds / 1000);
 	milliseconds -= (seconds * 1000)
-
-	countdown.innerHTML = days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds, " + milliseconds + " milliseconds";
+	$('#days').html(days);
+	$('#hours').html(hours);
+	$('#minutes').html(minutes);
+	$('#seconds').html(seconds);
+	$('#milliseconds').html(milliseconds);
 
 }, 1);
 }

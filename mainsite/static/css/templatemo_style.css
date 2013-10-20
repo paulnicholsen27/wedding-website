@@ -103,12 +103,25 @@ a.more:hover { text-decoration: none; color: #fff; }
 #search_box form { clear: both; width: 205px; height: 33px; padding: 0; } 
 #searchfield { height: 23px; width: 170px; padding: 5px; color: #fff; background: none; border: none; }
 
+/* countdown */
+
 #countdown_container{
-	margin-right: auto;
-	margin-left: auto;
-	display: block;
-	width: 500px;
 	text-align: center;
+}
+
+#countdown{
+	display: inline-block;
+
+}
+.time_container {
+	float: left;
+	text-align: center;
+	padding: 0 30px;
+}
+
+.time_label {
+	font-size: 18px;
+	padding-top: 10px;
 }
 /* menu */
 
@@ -517,7 +530,4 @@ a.more:hover { text-decoration: none; color: #fff; }
 	text-align: justify;
 }
 
-/*.wedding_party_row_contents{
-	margin-left: auto;
-	margin
-}*/
+
