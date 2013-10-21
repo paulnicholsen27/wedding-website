@@ -105,8 +105,21 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 /* countdown */
 
+#wedding_date_container{
+	margin: 0 0 15px 0;
+
+}
+
+#wedding_date{
+	color: green;
+}
 #countdown_container{
 	text-align: center;
+	padding: 20px;
+	border: 2px black solid;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
 
 #countdown{
