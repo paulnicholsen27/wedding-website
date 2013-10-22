@@ -543,4 +543,9 @@ a.more:hover { text-decoration: none; color: #fff; }
 	text-align: justify;
 }
 
+/*fancybox*/
+.fancybox-thumb img{
+	height: 100px;
+	width: 100px;
+}
 
