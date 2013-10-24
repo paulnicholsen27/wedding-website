@@ -545,8 +545,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 /*fancybox*/
 .fancybox-thumb img{
-	height: 10%;
-	width: 10%;
+	height: auto;
+	width: 90px;
 	padding: 10px;
 }
 

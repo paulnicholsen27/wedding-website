@@ -50,7 +50,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = '/Users/nicholsp/personal/wedding-website/mainsite/static/images/photoalbum/'
+MEDIA_ROOT = '/Users/paulnichols/code/wedding/mainsite/static/images/photoalbum/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
