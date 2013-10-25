@@ -130,6 +130,7 @@ INSTALLED_APPS = (
     'mainsite',
     'quiz',
     'photoalbum',
+    'django_google_maps',
 )
 
 # A sample logging configuration. The only tangible logging

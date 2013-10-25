@@ -73,7 +73,8 @@ def guestbook(request):
 				message = form.save()
 	return render_to_response("guestbook.html", {'messages':messages}, RequestContext(request))
 
-
+def map(request):
+	return render_to_response("map.html", {}, RequestContext(request))
 # def login(request):
 # 	response_dict = {}
 # 	email = request.POST.get('email', False)
