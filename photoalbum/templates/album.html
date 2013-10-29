@@ -1,26 +1,29 @@
 {% extends "base.html" %}
 
-  {% block content %}
-    <div id="templatemo_middle">
-    
-    	<div id="middle_img"></div>
-        
-        <div id="m_right">
-	        <h1>See who knows us best!</h1>
-            <p>And who is dead to us.</p>
-          	
-		    </div>
-    
+{% block content %}
+<div id="templatemo_middle">
+
+ <div id="middle_img"></div>
+
+ <div id="m_right">
+   <h1>See who knows us best!</h1>
+   <p>And who is dead to us.</p>
+
+ </div>
+
+</div>
+
+<div id="templatemo_content">
+
+<div id='album_wrapper'>
+  <div id='album'>
+    {% for image in images %}
+    <a class="fancybox_thumb" rel="photo_album" href="../static/images/photoalbum/{{image}}" title="{{image.title}}">
+      <img src="../static/images/photoalbum/{{image}}" alt="" />
+      {% endfor %}
+      <div class="cleaner"></div>
     </div>
-    
-    <div id="templatemo_content">
-
-
-  {% for image in images %}
-      <a class="fancybox-thumb" rel="photo_album" href="../static/images/photoalbum/{{image}}" title="{{image.title}}">
-  <img src="../static/images/photoalbum/{{image}}" alt="" />
-{% endfor %}
-        <div class="cleaner"></div>
-      </div>
-      <div id="templatemo_content_bottom"></div>
-    {% endblock %}
+  </div>
+</div>
+  <div id="templatemo_content_bottom"></div>
+  {% endblock %}

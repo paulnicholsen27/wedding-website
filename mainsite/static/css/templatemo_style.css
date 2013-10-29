@@ -544,9 +544,16 @@ a.more:hover { text-decoration: none; color: #fff; }
 }
 
 /*fancybox*/
-.fancybox-thumb img{
+.fancybox_thumb img{
 	height: auto;
 	width: 90px;
-	padding: 10px;
+	padding: 10px 20px;
 }
 
+#album {
+	display: inline-block;
+}
+
+#album_wrapper {
+	text-align: center;
+}

@@ -83,43 +83,6 @@ function clearText(field)
         
     </div> <!-- end of templatemo_menu -->
   
-<!--     <div style="display:none">
-        {% if form.errors %}
-            <p id="error">{{ error_message }}
-        {% endif %}
-
-        <form id="newuser_form" action="" method="POST">
-            {% csrf_token %}
-
-            <label for="firstname">First name:</label>
-            <input type="text" name="firstname" value="" id="firstname">
-            <label for="lastname">Last name:</label>
-            <input type="text" name="lastname" value="" id="lastname">
-            <label for="email">Email:</label>
-            <input type="text" name="email" value="" id="email">
-            <label for="password">Password:</label>
-            <input type="password" name="password" value="" id="password">
-            <label for="confirm">Re-enter password:</label>
-            <input type="password" name="confirm" value="" id="confirm">
-            <input type="submit" name="newuser" value="Create User" />
-        </form>
-    </div>
-
-    <div style="display:none">
-        {% if form.errors %}
-            <p class="error">{{ error_message }}
-        {% endif %}
-
-        <form id="login_form" action=""  method="POST">
-          {% csrf_token %}
-
-            <label for="email">Email:</label>
-            <input type="text" name="email" value="" id="email">
-            <label for="password">Password:</label>
-            <input type="password" name="password" value="" id="password">
-            <input type="submit" name="login" value="Log In" />
-        </form>
-    </div> -->
 
     {% block content %}
     <div id="templatemo_middle">
@@ -162,7 +125,7 @@ function clearText(field)
                 </div>
             </div>
         </div>
-        <br><br><br>
+        <br><br>
         <!-- <div class="content_box last">
         
             <div class="col_w340">
