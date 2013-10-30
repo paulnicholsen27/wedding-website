@@ -89,7 +89,8 @@ setInterval(function(){
 })
 
 $(document).ready(function() {
-	$(".fancybox-thumb").fancybox({
+	$(".fancybox_thumb").fancybox({
+
 		prevEffect	: 'none',
 		nextEffect	: 'none',
 		helpers	: {
