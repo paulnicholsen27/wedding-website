@@ -15,7 +15,7 @@ body {
 	background-repeat: no-repeat
 }
 
-a, a:link, a:visited { color: #dc6606; font-weight: bold; text-decoration: none; }
+a, a:link, a:visited { color: #00bb06; font-weight: bold; text-decoration: none; }
 a:hover { color: #0066CC; text-decoration: underline; }
 
 p { margin: 0 0 10px 0; padding: 0; }
@@ -181,7 +181,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 */}
 
 #templatemo_menu ul li a:hover, 
-#templatemo_menu ul li .current { color: #dc6606 }
+#templatemo_menu ul li .current { color: #00bb06 }
 
 #templatemo_menu ul li .last { 
 	background: none 
@@ -236,7 +236,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 #login { float: right; }
 #login a { color: #383838; font-weight: 400 }
-#login a:hover { color: #dc6606; }
+#login a:hover { color: #00bb06; }
 
 /* end of menu */
 
@@ -277,8 +277,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 	padding-right: 50px;
 }
 
-#m_right h1 { color: #ddd; margin-bottom: 15px  }
-#m_right p { color: #969696; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif }
+#m_right h1 { color: #ddd; margin-bottom: 15px; text-align: center}
+#m_right p { color: #969696; font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; text-align: justify }
 
 #templatemo_content {
 	clear: both;
@@ -557,3 +557,14 @@ a.more:hover { text-decoration: none; color: #fff; }
 #album_wrapper {
 	text-align: center;
 }
+
+#welcome {
+	color: #933; 
+	font-weight: normal; 
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	padding: 0 40px;
+	text-align: justify;
+	line-height: 30px
+
+	}
