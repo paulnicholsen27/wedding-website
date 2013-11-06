@@ -139,8 +139,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 /* menu */
 
 #templatemo_menu {
-	width: 900px;
-	height: 47px;
+	width: 990px;
+	height: 65px;
 	padding: 25px 50px 0;
 	font-size: 16px;
 	background: url(/static/images/templatemo_menu.png) no-repeat;
@@ -242,8 +242,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 #templatemo_middle {
 	clear: both;
-	width: 900px;
-	height: 200px;
+	width: 1000px;
+	height: 227px;
 	padding: 15px 50px;
 	background: url(/static/images/templatemo_slider.png) no-repeat;
 }
@@ -282,7 +282,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 #templatemo_content {
 	clear: both;
-	width: 900px;
+	width: 980px;
 	padding: 30px 50px;
 	background: url(/static/images/templatemo_content.png) repeat-y
 }
@@ -343,7 +343,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 .quiz_answer{
 	font-size: 14px; 
 	margin: 0 0 2px; 
-	padding: 0}
+	padding: 0;
+	vertical-align: middle;}
 
 .right_answer{
 	font-weight: bold;
@@ -546,7 +547,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 /*fancybox*/
 .fancybox_thumb img{
 	height: auto;
-	width: 90px;
+	width: 130px;
 	padding: 10px 20px;
 }
 
@@ -558,6 +559,9 @@ a.more:hover { text-decoration: none; color: #fff; }
 	text-align: center;
 }
 
+div #photo_album_caption, div #photo_album_title{
+	text-align: center;
+}
 #welcome {
 	color: #933; 
 	font-weight: normal; 
@@ -568,3 +572,9 @@ a.more:hover { text-decoration: none; color: #fff; }
 	line-height: 30px
 
 	}
+
+label {
+	font-weight: normal;
+	margin-left: 3px;
+	padding-top: 1px;
+}
