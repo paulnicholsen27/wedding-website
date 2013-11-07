@@ -91,11 +91,18 @@ setInterval(function(){
 $(document).ready(function() {
 	$(".fancybox_thumb").fancybox({
 
-		prevEffect	: 'none',
-		nextEffect	: 'none',
+		prevEffect	: 'fade',
+		nextEffect	: 'fade',
+		openEffect	: 'elastic',
+		closeEffect : 'elastic',
+		nextClick	: true,
+		mouseWheel	: true,
 		helpers	: {
+			css : {
+				'background' : 'rgba(100, 100, 100, .95)'
+			},
 			title	: {
-				type: 'outside'
+				type: 'float'
 			},
 			thumbs	: {
 				width	: 50,
