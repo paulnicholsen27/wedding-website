@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6, #countdown { color: #333; font-weight: normal; font-fami
 h1 { font-size: 28px;}
 h2, #countdown { font-size: 25px;}
 h3 { font-size: 22px; margin: 0 0 15px; padding: 0; }
-h4 { font-size: 18px; margin: 0 0 15px; padding: 0; }
+h4 { font-size: 18px; margin: 0 0 15px; padding: 0; line-height: 1.6;}
 h5 { font-size: 16px; margin: 0 0 10px; padding: 0;  }
 h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
@@ -251,6 +251,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 #templatemo_middle #middle_img {
 	float: left;
 	position: relative;
+	left: 33px;
 	width: 285px;
 	height: 186px;
 	padding: 6px;
@@ -284,7 +285,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 	clear: both;
 	width: 980px;
 	padding: 30px 50px;
-	background: url(/static/images/templatemo_content.png) repeat-y
+	background: url(/static/images/templatemo_content.png) repeat-y;
+	text-align: justify;
 }
 
 #templatemo_content_bottom {
@@ -399,7 +401,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 	color: blue;
 }
 
-.guestbook{
+p.guestbook{
 	font-size: 14px;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	width: 700px;
@@ -408,6 +410,18 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
+
+#m_right p.guestbook_title{
+	text-align: center;
+}
+
+.guestbook_message{
+	margin: 0px 30px;
+}
+
+/*.guest_hr{
+	margin: 0;
+}*/
 #message_form{
 	display: none;
 
@@ -474,6 +488,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#submit_btn_container{text-align: center}
 #guest_submit:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
 	background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
