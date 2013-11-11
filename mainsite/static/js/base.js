@@ -30,10 +30,11 @@ $(document).ready(function(){
 
 		if ($("#guest_name").val().length < 1 || $("#guest_message").val().length < 1) {
 		    $("#guest_error").show();
-		    $.fancybox.resize();
-		    return false;
-		}
 
+		    return false;
+
+		}
+		else{
 		$.fancybox.showActivity();
 		$.ajax({
 			type: "POST",
@@ -42,14 +43,12 @@ $(document).ready(function(){
 			data: $(this).serializeArray(),
 			success: function(data){
 				$.fancybox(data);
-			} 
-
-
-		});
+			}, 
+			});
+		};
 		return false;
-
 	});
-})
+});
 
 $(document).ready(function(){
 	time_units = ["days", "hours", "minutes", "seconds", "milliseconds"];
