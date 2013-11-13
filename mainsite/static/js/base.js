@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 		if ($("#guest_name").val().length < 1 || $("#guest_message").val().length < 1) {
 		    $("#guest_error").show();
-		    $.fancybox.resize();
+		    $.fancybox.update();
 		    return false;
 		}
 
@@ -42,7 +42,7 @@ $(document).ready(function(){
 			data: $(this).serializeArray(),
 			success: function(data){
 				$.fancybox(data);
-			} 
+			},
 
 
 		});

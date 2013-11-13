@@ -362,7 +362,7 @@ a.more:hover { text-decoration: none; color: #fff; }
 .error{
 	color: red;
 	font-size: 14px;
-	margin: 0 20px 0 0;
+	text-align: center;
 }
 .result_message{
 	font-size: 14px;
