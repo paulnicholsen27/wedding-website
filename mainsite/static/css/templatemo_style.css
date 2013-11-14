@@ -521,7 +521,7 @@ p.guestbook{
 }
 .wedding_party_member{
 	float:left;
-	width:300px;
+	width:auto;
 	height: auto;
 	font-size: 14px;
 	padding: 0 0;
@@ -532,6 +532,7 @@ p.guestbook{
 	font-weight: bold;
 	clear: both;
 	text-align: center;
+	font-style: italic;
 }
 
 .wedding_party_row{
@@ -540,6 +541,7 @@ p.guestbook{
 /*	margin-left: auto;
 	margin-right: auto;
 	width: auto;*/
+	margin-bottom: 42px;
 }
 
 .wedding_party_row_contents{
@@ -549,23 +551,29 @@ p.guestbook{
 .party_image img{
 	height: 270px;
 	width: 270px;
-	padding: 10px;
 	text-align: center;
 }
 
 .party_name{
 	font-weight: bold;
-	padding: 10px;
 	text-align: center;
 	font-size: 16px;
-	clear: top;
+	padding-top: 10px;
 }
 
 .party_text{
-	margin: 10px 22px 5px 22px;
 	text-align: justify;
+/*	  width: 90%;
+  height: 40%;*/
+/*  overflow: auto;
+*/  margin: auto;
+  position: absolute;
+  top: 50px; left: 10px; bottom: 0; right: 10px;
 }
 
+.party_text_container{
+	position: relative;
+}
 /*fancybox*/
 .fancybox_thumb img{
 	height: auto;
@@ -619,6 +627,7 @@ label {
 .flip-container, .front, .back {
 	width: 320px;
 	height: 480px;
+	margin: 10px 0 10px 0;
 }
 
 /* flip speed goes here */
@@ -646,6 +655,8 @@ label {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+	border: 1px solid black;
+	background-color: #99CCFF;ß
 }
 
 .flip-container {
@@ -656,8 +667,8 @@ label {
 }
 
 .flip-container, .front, .back {
-    width: 320px;
-    height: 480px;
+    width: 280px;
+    height: 270px;
 }
 
 .flipper {
