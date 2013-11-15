@@ -9,10 +9,11 @@ body {
 	font-family: Tahoma, Geneva, sans-serif;
 	font-size: 12px;
 	line-height: 1.7em; 
-	background-image: url(/static/images/templatemo_bg1.jpg);
-	background-color: #000000;
-	background-position: top center;
-	background-repeat: no-repeat
+	background: url(/static/images/leaves_background2.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 a, a:link, a:visited { color: #00bb06; font-weight: bold; text-decoration: none; }
