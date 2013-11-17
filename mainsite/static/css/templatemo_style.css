@@ -694,7 +694,7 @@ label {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
-	background-color: #99CCFF;ß
+	background-color: #99CCFF;
 }
 
 .flip-container {
