@@ -149,14 +149,14 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 #templatemo_menu ul {
 	z-index: 1001;
-/*	float: left;
-*/	width: auto;
+	float: left;
+	width: auto;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	position: relative;
-	display: inline;
-}
+/*	display: inline;
+*/}
 
 #templatemo_menu ul li {
 	padding: 0px;
