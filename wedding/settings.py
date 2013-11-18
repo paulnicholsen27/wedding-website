@@ -62,12 +62,12 @@ MEDIA_ROOT = '/Users/paulnichols/code/wedding/mainsite/static/images/photoalbum/
 MEDIA_URL = 'http://127.0.0.1:8000/photos/'
 
 import os
-PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'mainsite/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, 'static'),
+       os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 # List of finder classes that know how to find static files in
