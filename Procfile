@@ -1,1 +1,1 @@
-web: gunicorn weddingß.wsgi
+web: python manage.py runserver
