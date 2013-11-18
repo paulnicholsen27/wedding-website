@@ -46,3 +46,9 @@ def map(request):
 
 # def newuser(request):
 # 	return render_to_response("newuser.html", {}, RequestContext(request))
+
+def lodging(request):
+	return render_to_response("lodging.html", {}, RequestContext(request))
+
+def afterparty(request):
+	return render_to_response("afterparty.html", {}, RequestContext(request))

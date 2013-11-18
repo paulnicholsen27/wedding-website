@@ -19,6 +19,9 @@ urlpatterns = patterns('',
     url(r'^photos/$', 'photoalbum.views.photo_album', name='photo_album'),
     url(r'^guestbook/$', 'mainsite.views.guestbook', name='guestbook'),
     url(r'^map/$', 'mainsite.views.map', name='map'),
+    url(r'^afterparty/$', 'mainsite.views.afterparty', name='afterparty'),
+    url(r'^lodging/$', 'mainsite.views.lodging', name='lodging'),
+
     # url(r'^login/$', 'mainsite.views.base', name='login'),
     # url(r'^newuser/$', 'mainsite.views.base', name='newuser'),
     # Uncomment the admin/doc line below to enable admin documentation:

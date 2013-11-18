@@ -2,3 +2,5 @@ after party
 lodging
 better background image
 text on back of wedding party
+
+make vertical bar for thumbnails
