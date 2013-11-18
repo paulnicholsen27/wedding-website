@@ -1,7 +1,7 @@
 /*
 Credit: http://www.templatemo.com
 */
-
+html {overflow-y:scroll;}
 body {
 	margin: 0px;
 	padding: 0px;
@@ -196,13 +196,13 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 
 #templatemo_menu ul:after {
-		content: ""; 
-		clear: both; 
-		display: block;
-	}
+	content: ""; 
+	clear: both; 
+	display: block;
+}
 
 
-	
+
 #templatemo_menu ul ul {
 	display: none;
 	border-radius: 0px; 
@@ -225,12 +225,12 @@ a.more:hover { text-decoration: none; color: #fff; }
 #templatemo_menu ul ul:last-child {
 /*    border:1px solid red;
 */    -webkit-border-bottom-left-radius: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    -moz-border-radius-bottomleft: 15px;
-    -moz-border-radius-bottomright: 15px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    padding:2px;t
+-webkit-border-bottom-right-radius: 15px;
+-moz-border-radius-bottomleft: 15px;
+-moz-border-radius-bottomright: 15px;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+padding:2px;t
 
 }
 
@@ -338,8 +338,8 @@ a.more:hover { text-decoration: none; color: #fff; }
 
 .quiz_question, .quiz_answer .result_message .correct{
 	color: #333; 
-    font-weight: normal; 
-    font-family: Georgia, "Times New Roman", Times, serif
+	font-weight: normal; 
+	font-family: Georgia, "Times New Roman", Times, serif
 
 }
 
@@ -348,116 +348,116 @@ a.more:hover { text-decoration: none; color: #fff; }
 	margin: 20px 30px 20px 0px; 
 	padding: 0}
 
-.quiz_answer{
-	font-size: 14px; 
-	margin: 0 0 2px; 
-	padding: 0;
-	vertical-align: middle;}
+	.quiz_answer{
+		font-size: 14px; 
+		margin: 0 0 2px; 
+		padding: 0;
+		vertical-align: middle;}
 
-.right_answer{
-	font-weight: bold;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	margin: 0;
-	}
+		.right_answer{
+			font-weight: bold;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			margin: 0;
+		}
 
-.user_answer{
-	color: red;
-	font-weight: 700,
-}
+		.user_answer{
+			color: red;
+			font-weight: 700,
+		}
 
-.error{
-	color: red;
-	font-size: 14px;
-	text-align: center;
-}
-.result_message{
-	font-size: 14px;
-	font-style: italic;
-}
+		.error{
+			color: red;
+			font-size: 14px;
+			text-align: center;
+		}
+		.result_message{
+			font-size: 14px;
+			font-style: italic;
+		}
 
-.strikeout {text-decoration:line-through;}
+		.strikeout {text-decoration:line-through;}
 
-.story {
-	font-size: 16px;
-	text-align: justify;
-	padding: 5px 45px 5px 45px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-#high_scores{
-	margin-right: auto;
-	margin-left: auto;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-#high_scores th{
-	font-size: 18px;
-	width: 100px;
-	padding-bottom: 10px;
-}
+		.story {
+			font-size: 16px;
+			text-align: justify;
+			padding: 5px 45px 5px 45px;
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+		#high_scores{
+			margin-right: auto;
+			margin-left: auto;
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+		#high_scores th{
+			font-size: 18px;
+			width: 100px;
+			padding-bottom: 10px;
+		}
 
-#high_scores td{
-	font-size: 16px;
-	text-align: center;
-	padding-bottom: 5px;
-	width: auto;
-}
+		#high_scores td{
+			font-size: 16px;
+			text-align: center;
+			padding-bottom: 5px;
+			width: auto;
+		}
 
-.thank_you{
-	font-size: 14px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	color: blue;
-}
+		.thank_you{
+			font-size: 14px;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			color: blue;
+		}
 
-p.guestbook{
-	font-size: 14px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	width: 700px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
+		p.guestbook{
+			font-size: 14px;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
 
-#m_right p.guestbook_title{
-	text-align: center;
-}
+		#m_right p.guestbook_title{
+			text-align: center;
+		}
 
-.guestbook_message{
-	margin: 0px 30px;
-}
+		.guestbook_message{
+			margin: 0px 30px;
+		}
 
 /*.guest_hr{
 	margin: 0;
-}*/
-#message_form{
-	display: none;
+	}*/
+	#message_form{
+		display: none;
 
 
 
-}
+	}
 
-.message_header{
+	.message_header{
 
-}
+	}
 
-.message_sender{
+	.message_sender{
 
-}
+	}
 
-.message_date{
-	float: right;
-}
+	.message_date{
+		float: right;
+	}
 
-.message_body{
-	padding: 15px;
-	font-weight: bold;
-}
+	.message_body{
+		padding: 15px;
+		font-weight: bold;
+	}
 
-.message_response{
-	padding-left: 50px;
-	font-style: italic;
-}
+	.message_response{
+		padding-left: 50px;
+		font-style: italic;
+	}
 
-#guest_submit {
+	#guest_submit {
 		-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 		-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
 		box-shadow:inset 0px 1px 0px 0px #fce2c1;
@@ -497,47 +497,47 @@ p.guestbook{
 		background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
 		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
 		background-color:#fb9e25;
-	}#guest_submit:active {
-		position:relative;
-		top:1px;
-	}
-	/* This button was generated using CSSButtonGenerator.com */
+		}#guest_submit:active {
+			position:relative;
+			top:1px;
+		}
+		/* This button was generated using CSSButtonGenerator.com */
 
 
-#submit_btn_container{text-align: center}
+		#submit_btn_container{text-align: center}
 
 
-.container{
-	text-align: center;
-}
+		.container{
+			text-align: center;
+		}
 
-#guest_error{
-	display:none;
-}
+		#guest_error{
+			display:none;
+		}
 
-/*wedding_party*/
+		/*wedding_party*/
 
-.wedding_party_container{
-/*border:2px solid blue;*/
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.wedding_party_member{
-	float:left;
-	width:auto;
-	height: auto;
-	font-size: 14px;
-	padding: 0 0;
-}
+		.wedding_party_container{
+			/*border:2px solid blue;*/
+			font-family: Georgia, "Times New Roman", Times, serif;
+		}
+		.wedding_party_member{
+			float:left;
+			width:auto;
+			height: auto;
+			font-size: 14px;
+			padding: 0 0;
+		}
 
-.wedding_party_header{
-	font-size: 28px;
-	clear: both;
-	text-align: center;
-	font-family: Cambria, Georgia, serif;}
+		.wedding_party_header{
+			font-size: 28px;
+			clear: both;
+			text-align: center;
+			font-family: Cambria, Georgia, serif;}
 
-.wedding_party_row{
-	clear: both;
-	text-align: center;
+			.wedding_party_row{
+				clear: both;
+				text-align: center;
 /*	margin-left: auto;
 	margin-right: auto;
 	width: auto;*/
@@ -563,19 +563,30 @@ p.guestbook{
 }
 
 .party_text{
-	text-align: center;
-/*	  width: 90%;
-  height: 40%;*/
-/*  overflow: auto;
-*/  margin: auto;
-  position: absolute;
-  top: 50px; left: 10px; bottom: 0; right: 10px;
-  font-family: Cambria, Georgia, serif;
-  font-size: 16px;
+	text-align: justify;
+	font-family: Cambria, Georgia, serif;
+	font-size: 18px;
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .party_text_container{
+	display: table;
 	position: relative;
+	/* default background colour, for all layout engines that don't implement gradients */
+	background: #FFDEAD;
+
+	/* gecko based browsers */
+	background: -moz-linear-gradient(top, #FFAD33, #FFDEAD);
+
+	/* webkit based browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFAD33), to(#FFDEAD));
+
+	color: #000000; /* text colour (black) */
+	height: 240px; /* gradient uses the full height of the element */
+	width: 240px;
+	padding: 5px; /* distance from border edge to text */
 }
 /*fancybox*/
 .fancybox_thumb img{
@@ -584,6 +595,15 @@ p.guestbook{
 	padding: 10px 20px;
 }
 
+.first_letter {
+	float: left; 
+	color: #903; 
+	font-size: 40px; 
+	line-height: 32px; 
+	padding-top: 4px; 
+	padding-right: 4px; 
+	padding-left: 0px; 
+}
 #album {
 	display: inline-block;
 }
@@ -604,7 +624,7 @@ div #photo_album_caption, div #photo_album_title{
 	text-align: justify;
 	line-height: 30px
 
-	}
+}
 
 label {
 	font-weight: normal;
@@ -618,32 +638,32 @@ label {
 }
 
 #map{-webkit-box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 18px #fff,
-                0px 0px 0px 22px rgba(0,0,0,0.2),
-                6px 6px 8px 21px #555;
-   
-     -moz-box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 18px #fff,
-                0px 0px 0px 22px rgba(0,0,0,0.2),
-                6px 6px 8px 21px #555;
-   
-          box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 18px #fff,
-                0px 0px 0px 22px rgba(0,0,0,0.2),
-                6px 6px 8px 21px #555;
-            }
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 18px #fff,
+	0px 0px 0px 22px rgba(0,0,0,0.2),
+	6px 6px 8px 21px #555;
+
+	-moz-box-shadow:
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 18px #fff,
+	0px 0px 0px 22px rgba(0,0,0,0.2),
+	6px 6px 8px 21px #555;
+
+	box-shadow:
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 18px #fff,
+	0px 0px 0px 22px rgba(0,0,0,0.2),
+	6px 6px 8px 21px #555;
+}
 
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 }
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
 
 .flip-container, .front, .back {
 	width: 320px;
@@ -668,22 +688,22 @@ label {
 	top: 0;
 	left: 0;
 	-webkit-box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 14px #fff,
-                0px 0px 0px 18px rgba(0,0,0,0.2),
-                6px 6px 8px 17px #555;
-   
-     -moz-box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 14px #fff,
-                0px 0px 0px 18px rgba(0,0,0,0.2),
-                6px 6px 8px 17px #555;
-   
-          box-shadow:
-            0px 0px 0px 2px rgba(0,0,0,0.6),
-                0px 0px 0px 14px #fff,
-                0px 0px 0px 18px rgba(0,0,0,0.2),
-                6px 6px 8px 17px #555;
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 14px #fff,
+	0px 0px 0px 18px rgba(0,0,0,0.2),
+	6px 6px 8px 17px #555;
+
+	-moz-box-shadow:
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 14px #fff,
+	0px 0px 0px 18px rgba(0,0,0,0.2),
+	6px 6px 8px 17px #555;
+
+	box-shadow:
+	0px 0px 0px 2px rgba(0,0,0,0.6),
+	0px 0px 0px 14px #fff,
+	0px 0px 0px 18px rgba(0,0,0,0.2),
+	6px 6px 8px 17px #555;
 }
 
 /* front pane, placed above back */
@@ -698,78 +718,78 @@ label {
 }
 
 .flip-container {
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    -o-perspective: 1000;
-    perspective: 1000;
-    margin: 20px 26px 32px 26px;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-o-perspective: 1000;
+	perspective: 1000;
+	margin: 20px 26px 32px 26px;
 }
 
 .flip-container, .front, .back {
-    width: 240px;
-    height: 240px;
+	width: 240px;
+	height: 240px;
 }
 
 .flipper {
-    -moz-transform: perspective(1000px);
-    -moz-transform-style: preserve-3d;
+	-moz-transform: perspective(1000px);
+	-moz-transform-style: preserve-3d;
 
-    position: relative;
+	position: relative;
 }
 
 .front, .back {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
 
-    -webkit-transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
 
-    -moz-transition: 0.6s;
-    -moz-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
 
-    -o-transition: 0.6s;
-    -o-transform-style: preserve-3d;
+	-o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
 
-    -ms-transition: 0.6s;
-    -ms-transform-style: preserve-3d;
+	-ms-transition: 0.6s;
+	-ms-transform-style: preserve-3d;
 
-    transition: 0.6s;
-    transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
 
 
-    position: absolute;
-    top: 0;
-    left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .back {
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
 }
 
 .flip-container:hover .back, .flip-container.hover .back {
-    -webkit-transform: rotateY(0deg);
-    -moz-transform: rotateY(0deg);
-    -o-transform: rotateY(0deg);
-    -ms-transform: rotateY(0deg);
-    transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
 }
 
 .flip-container:hover .front, .flip-container.hover .front {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
 
 
 .front {
-    z-index: 2;
+	z-index: 2;
 }
 
 #tba {width: 850px; height: auto;}
