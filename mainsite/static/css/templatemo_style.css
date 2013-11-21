@@ -661,138 +661,153 @@ label {
 
 /* entire container, keeps perspective */
 .flip-container {
-	perspective: 1000;
+    -moz-perspective: 1000;
+    perspective: 1000;
 }
 /* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-	transform: rotateY(180deg);
+.flip-container:hover .flipper, 
+.flip-container.hover .flipper {
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
-	width: 320px;
-	height: 480px;
-	margin: 10px 0 10px 0;
-
+.flip-container, 
+.front, 
+.back {
+    /*width: 320px;
+    height: 480px;*/
+    margin: 10px 0 10px 0;
 }
 
 /* flip speed goes here */
 .flipper {
-	transition: 0.6s;
-	transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 
-	position: relative;
+    position: relative;
 }
 
 /* hide back of pane during swap */
-.front, .back {
-	backface-visibility: hidden;
+.front, 
+.back {
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-	position: absolute;
-	top: 0;
-	left: 0;
-	-webkit-box-shadow:
-	0px 0px 0px 2px rgba(0,0,0,0.6),
-	0px 0px 0px 14px #fff,
-	0px 0px 0px 18px rgba(0,0,0,0.2),
-	6px 6px 8px 17px #555;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
 
-	-moz-box-shadow:
-	0px 0px 0px 2px rgba(0,0,0,0.6),
-	0px 0px 0px 14px #fff,
-	0px 0px 0px 18px rgba(0,0,0,0.2),
-	6px 6px 8px 17px #555;
+    -moz-box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+    /*! Volker_E Don't include -moz-box-shadow any more if you don't explicitely want to support Fx 3.6, see https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow */
 
-	box-shadow:
-	0px 0px 0px 2px rgba(0,0,0,0.6),
-	0px 0px 0px 14px #fff,
-	0px 0px 0px 18px rgba(0,0,0,0.2),
-	6px 6px 8px 17px #555;
+    box-shadow:
+    0px 0px 0px 2px rgba(0,0,0,0.6),
+    0px 0px 0px 14px #fff,
+    0px 0px 0px 18px rgba(0,0,0,0.2),
+    6px 6px 8px 17px #555;
+    /*! Volker_E: get rid of the unit when values are '0'. So '0' instead of '0px'. */
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
+    z-index: 2;
 }
 
 /* back, initially hidden pane */
 .back {
-	transform: rotateY(180deg);
-	background-color: #99CCFF;
+    background-color: #9CF; /*! Volker_E: use short hex notation here as well */
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .flip-container {
-	-webkit-perspective: 1000;
-	-moz-perspective: 1000;
-	-o-perspective: 1000;
-	perspective: 1000;
-	margin: 20px 26px 32px 26px;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+    margin: 20px 26px 32px 26px;
 }
 
-.flip-container, .front, .back {
-	width: 240px;
-	height: 240px;
+.flip-container, 
+.front, 
+.back {
+    width: 240px;
+    height: 240px;
 }
 
 .flipper {
-	-moz-transform: perspective(1000px);
-	-moz-transform-style: preserve-3d;
+    -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
 
-	position: relative;
+    position: relative;
 }
 
-.front, .back {
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	backface-visibility: hidden;
+.front, 
+.back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
 
-	-webkit-transition: 0.6s;
-	-webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
 
-	-moz-transition: 0.6s;
-	-moz-transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
 
-	-o-transition: 0.6s;
-	-o-transform-style: preserve-3d;
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
 
-	-ms-transition: 0.6s;
-	-ms-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
 
-	transition: 0.6s;
-	transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
 
-
-	position: absolute;
-	top: 0;
-	left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .back {
-	-webkit-transform: rotateY(-180deg);
-	-moz-transform: rotateY(-180deg);
-	-o-transform: rotateY(-180deg);
-	-ms-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
 }
 
-.flip-container:hover .back, .flip-container.hover .back {
-	-webkit-transform: rotateY(0deg);
-	-moz-transform: rotateY(0deg);
-	-o-transform: rotateY(0deg);
-	-ms-transform: rotateY(0deg);
-	transform: rotateY(0deg);
+/*.flip-container:hover .back, 
+.flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
 }
 
-.flip-container:hover .front, .flip-container.hover .front {
-	-webkit-transform: rotateY(180deg);
-	-moz-transform: rotateY(180deg);
-	-o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
-}
+.flip-container:hover .front, 
+.flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}*/
 
 
 .front {
-	z-index: 2;
+    z-index: 2;
 }
 
 #tba {width: 850px; height: auto;}
