@@ -102,7 +102,8 @@ $(document).ready(function() {
 				css : {
 					'background' : 'rgba(100, 100, 100, .95)'
 				},
-		}
+		},
+	},
 			title	: {
 				type: 'float'
 			},
@@ -110,7 +111,7 @@ $(document).ready(function() {
 				width	: 50,
 				height	: 50
 			}
-		}
+		
 	});
 });
 // $("#newuser_fancy").fancybox({
