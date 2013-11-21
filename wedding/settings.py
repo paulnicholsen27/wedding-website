@@ -19,6 +19,7 @@ DATABASES = {
         'PASSWORD': 'ella27',
         'HOST': 'localhost',
         'PORT': '5432',
+
     }
 }
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -127,7 +128,6 @@ INSTALLED_APPS = (
     'quiz',
     'photoalbum',
     'django_google_maps',
-    'south',
 )
 
 # A sample logging configuration. The only tangible logging

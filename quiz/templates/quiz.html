@@ -8,7 +8,7 @@
         
         <div id="m_right">
 	        <h1>Time for a test!</h1>
-            <p>See how well you know us!  Be warned:  If you don't score high enough, your invitation to our wedding may be rescinded.</p>
+            <p>See how well you know us!  Be warned:  If you don't score high enough, your invitation to our wedding may be in jeopardy.</p>
           	
 		</div>
     
@@ -39,8 +39,10 @@
         {% if errors.no_name %}
             <div class='error'>{{ errors.no_name }}</div>
         {% endif %}
+        <div>
         Name: <input id='name' name='name' type='text' value="{{ name }}">
         <button id='quiz_submit' type="submit" name="quiz_submit"><span>Judge Me!</span></button>
+    </div>
         </form>
 
     	<div class="cleaner"></div>
