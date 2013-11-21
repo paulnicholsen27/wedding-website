@@ -98,9 +98,11 @@ $(document).ready(function() {
 		nextClick	: true,
 		mouseWheel	: true,
 		helpers	: {
-			css : {
-				'background' : 'rgba(100, 100, 100, .95)'
-			},
+			overlay: {
+				css : {
+					'background' : 'rgba(100, 100, 100, .95)'
+				},
+		}
 			title	: {
 				type: 'float'
 			},

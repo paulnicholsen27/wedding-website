@@ -35,17 +35,7 @@ def guestbook(request):
 
 def map(request):
 	return render_to_response("map.html", {}, RequestContext(request))
-# def login(request):
-# 	response_dict = {}
-# 	email = request.POST.get('email', False)
-# 	password = request.POST.get('password', False)
-# 	response_dict.update({'email': email, 'password':password})
-# 	if not email or not password:
-# 		response_dict['errors'] = "Please fill out all fields."
-# 	return render_to_response("login.html", {}, RequestContext(request))
 
-# def newuser(request):
-# 	return render_to_response("newuser.html", {}, RequestContext(request))
 
 def lodging(request):
 	return render_to_response("lodging.html", {}, RequestContext(request))
