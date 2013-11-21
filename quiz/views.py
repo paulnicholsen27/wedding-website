@@ -14,7 +14,6 @@ def results(request):
 	if request.method == "GET":
 		return redirect("/quiz/")
 	else:
-		print request.POST
 		try:
 			name = request.POST['name']
 			if name == '':
