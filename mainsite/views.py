@@ -6,7 +6,14 @@ from models import Message
 from forms import MessageForm
 
 def base(request):
-	return render_to_response("base.html", {}, RequestContext(request))
+	warning_given = request.session.get('browser_warning', False)
+	print request.user_agent.browser.family
+	if request.user_agent.browser.family == 'MSIE' and not warning_given:
+		explorer=True
+		request.session['browser_warning'] = True
+	else:
+		explorer=False
+	return render_to_response("base.html", {'explorer':explorer}, RequestContext(request))
 
 
 def wedding_party(request):

@@ -34,15 +34,25 @@ function clearText(field)
         $(".fancybox").fancybox();
     });
 </script>
-
+{% load user_agents %}
 </head>
 <body>
 
 <div id="templatemo_wrapper">
-
+    {% if explorer %}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#hidden_link").fancybox().trigger('click');
+            });
+        </script>
+    {% endif %}
+<a id="hidden_link" href="#browser_warning"></a>
+<div id="browser_warning">
+    You are using Internet Explorer.  Internet Explorer is one of the worst things in the world.  You are missing out on half the Interwebs.  This site is going to look terrible on it.  I thought about investing hours and hours on making it look decent, even though half the features would never be able to work, but I thought I would do you a favor and encourage you to spend thirty seconds to download a browser built for the 21st century, like Chrome for <a href="https://www.google.com/intl/en/chrome/browser/?platform=win">Windows</a> or <a href="https://www.google.com/intl/en/chrome/browser/">Mac</a>.  You're welcome.
+    
+</div>
     <div id="templatemo_header">
 
-        
     </div>
     
     <div id="templatemo_menu">

@@ -819,3 +819,10 @@ label {
 }
 
 #tba {width: 850px; height: auto;}
+
+#browser_warning{
+	display:none;
+	width: 400px;
+	height: auto;
+	font-size: 14px;
+}

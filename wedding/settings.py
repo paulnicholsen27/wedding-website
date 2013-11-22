@@ -14,6 +14,8 @@ DATABASES = {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django_app_1',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': 'wedding.db',
         # The rest is not used with sqlite3:
         'USER': 'paulnichols',
         'PASSWORD': 'ella27',
@@ -100,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_user_agents.middleware.UserAgentMiddleware',
 )
 
 ROOT_URLCONF = 'wedding.urls'
@@ -131,6 +134,7 @@ INSTALLED_APPS = (
     'quiz',
     'photoalbum',
     'django_google_maps',
+    'django_user_agents',
 )
 
 # A sample logging configuration. The only tangible logging

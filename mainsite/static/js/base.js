@@ -25,6 +25,7 @@ $("#guest_submit").fancybox({
 
 });
 
+
 $(document).ready(function(){
 	$("#message_form").on("submit", function(){
 
