@@ -16,7 +16,9 @@ def results(request):
 	else:
 		try:
 			name = request.POST['name']
-			if name == '':
+			if len(name) < 3:
+				errors['no_name'] = "That's too short to be your name.  Don't be a jerk."
+			if name == None or name == '':
 				errors['no_name'] = "This is literally the easiest question on the page."
 			questions_objects = Question.objects.all()		
 			questions = [{'question' : question, 

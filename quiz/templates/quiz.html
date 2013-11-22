@@ -37,7 +37,7 @@
         {% endfor %}
         </ol>
         {% if errors.no_name %}
-            <div class='error'>{{ errors.no_name }}</div>
+            <div class='error' id = 'no_name'>{{ errors.no_name }}</div>
         {% endif %}
         <div>
         Name: <input id='name' name='name' type='text' value="{{ name }}">
