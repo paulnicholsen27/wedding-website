@@ -370,6 +370,10 @@ padding:2px;t
 			font-size: 14px;
 			text-align: center;
 		}
+
+		#no_name{
+			text-align: left;
+		}
 		.result_message{
 			font-size: 14px;
 			font-style: italic;
@@ -392,6 +396,7 @@ padding:2px;t
 			font-size: 18px;
 			width: 100px;
 			padding-bottom: 10px;
+			text-align: center;
 		}
 
 		#high_scores td{
