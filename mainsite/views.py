@@ -8,7 +8,7 @@ from forms import MessageForm
 def base(request):
 	warning_given = request.session.get('browser_warning', False)
 	print request.user_agent.browser.family
-	if request.user_agent.browser.family == 'MSIE' and not warning_given:
+	if 'xplorer' in request.user_agent.browser.family and not warning_given:
 		explorer=True
 		request.session['browser_warning'] = True
 	else:
