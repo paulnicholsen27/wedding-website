@@ -9,7 +9,7 @@ import pdb
 def base(request):
 	warning_given = request.session.get('browser_warning', False)
 	answer = request.user_agent.browser.family
-	if 'IE' in request.user_agent.browser.family and not warning_given:
+	if 'IE' in request.user_agent.browser.family:
 		explorer=True
 		request.session['browser_warning'] = True
 	else:
