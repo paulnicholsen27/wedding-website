@@ -4,16 +4,18 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login
 from models import Message
 from forms import MessageForm
+import pdb
 
 def base(request):
 	warning_given = request.session.get('browser_warning', False)
-	print request.user_agent.browser.family
-	if 'xplorer' in request.user_agent.browser.family and not warning_given:
+	pdb.set_trace()
+	answer = request.user_agent.browser.family
+	if 'IE' in request.user_agent.browser.family and not warning_given:
 		explorer=True
 		request.session['browser_warning'] = True
 	else:
 		explorer=False
-	return render_to_response("base.html", {'explorer':explorer}, RequestContext(request))
+	return render_to_response("base.html", {'explorer':explorer, 'answer':answer}, RequestContext(request))
 
 
 def wedding_party(request):
