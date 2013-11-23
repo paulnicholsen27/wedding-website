@@ -26,7 +26,6 @@ heroku==0.1.4
 mock==1.0.1
 psycopg2==2.5.1
 python-dateutil==1.5
-python-ldap==2.4.13
 requests==2.0.1
 six==1.4.1
 static==0.4
@@ -34,7 +33,5 @@ stevedore==0.12
 suit==2.0.2
 ua-parser==0.3.4
 user-agents==0.2.0
-virtualenv==1.9.1
-virtualenv-clone==0.2.4
-virtualenvwrapper==4.1.1
+
 wsgiref==0.1.2
