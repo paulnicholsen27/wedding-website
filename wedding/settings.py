@@ -1,6 +1,6 @@
 # Django settings for wedding project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -12,10 +12,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'django_app_1',
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'wedding.db',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'django_app_1',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': 'wedding.db',
         # The rest is not used with sqlite3:
         'USER': 'paulnichols',
         'PASSWORD': 'ella27',
