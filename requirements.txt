@@ -1,6 +1,5 @@
 Django==1.5.2
 Pillow==2.2.1
-PyYAML==3.10
 Pygments==1.6
 South==0.8.3
 Whoosh==2.5.4
