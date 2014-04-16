@@ -9,7 +9,7 @@ class User(models.Model):
 		return self.name
 
 class Message(models.Model):
-	name = models.CharField(max_length=256)
+	name = models.CharField(max_length=255)
 	message = models.TextField()
 	response = models.TextField(blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
