@@ -8,11 +8,19 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
+        # Adding field 'Message.spam'
+        db.add_column(u'mainsite_message', 'spam',
+                      self.gf('django.db.models.fields.CharField')(max_length=255, null=True, blank=True),
+                      keep_default=False)
+
 
         # Changing field 'Message.name'
-        db.alter_column(u'mainsite_message', 'name', self.gf('django.db.models.fields.CharField')(max_length=255))
+        db.alter_column(u'mainsite_message', 'name', self.gf('django.db.models.fields.CharField')(max_length=200))
 
     def backwards(self, orm):
+        # Deleting field 'Message.spam'
+        db.delete_column(u'mainsite_message', 'spam')
+
 
         # Changing field 'Message.name'
         db.alter_column(u'mainsite_message', 'name', self.gf('django.db.models.fields.CharField')(max_length=256))
@@ -23,7 +31,7 @@ class Migration(SchemaMigration):
             'date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'message': ('django.db.models.fields.TextField', [], {}),
-            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'response': ('django.db.models.fields.TextField', [], {'null': 'True', 'blank': 'True'}),
             'spam': ('django.db.models.fields.CharField', [], {'max_length': '255', 'null': 'True', 'blank': 'True'})
         },
