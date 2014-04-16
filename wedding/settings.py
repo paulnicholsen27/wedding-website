@@ -1,6 +1,6 @@
 # Django settings for wedding project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -12,15 +12,15 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_app_1',
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': 'wedding.db',
+        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        # 'NAME': 'django_app_1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'wedding.db',
         # The rest is not used with sqlite3:
-        'USER': 'paulnichols',
-        'PASSWORD': 'ella27',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        # 'USER': 'paulnichols',
+        # 'PASSWORD': 'ella27',
+        # 'HOST': 'localhost',
+        # 'PORT': '5432',
 
     }
 }
@@ -135,6 +135,7 @@ INSTALLED_APPS = (
     'photoalbum',
     'django_google_maps',
     'django_user_agents',
+    'south',
 )
 
 # A sample logging configuration. The only tangible logging

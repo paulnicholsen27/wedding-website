@@ -826,3 +826,8 @@ label {
 	height: auto;
 	font-size: 14px;
 }
+
+.form-group #spam_catcher{
+	display:none;
+
+}

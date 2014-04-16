@@ -13,5 +13,9 @@ class Message(models.Model):
 	message = models.TextField()
 	response = models.TextField(blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
+	spam = models.CharField(max_length=255, blank=True, null=True)
+
+	def __unicode__(self):
+		return "{0} said '{1}'".format(self.name, self.message)
 
 	
