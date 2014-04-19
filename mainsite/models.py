@@ -18,4 +18,5 @@ class Message(models.Model):
 	def __unicode__(self):
 		return "{0} said '{1}'".format(self.name, self.message)
 
-	
+AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'

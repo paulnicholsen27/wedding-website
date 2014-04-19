@@ -21,7 +21,8 @@ urlpatterns = patterns('',
     url(r'^map/$', 'mainsite.views.map', name='map'),
     url(r'^afterparty/$', 'mainsite.views.afterparty', name='afterparty'),
     url(r'^lodging/$', 'mainsite.views.lodging', name='lodging'),
-
+    url(r'^facebook/', include('django_facebook.urls')),
+    url(r'^accounts/', include('django_facebook.auth_urls')),
     # url(r'^login/$', 'mainsite.views.base', name='login'),
     # url(r'^newuser/$', 'mainsite.views.base', name='newuser'),
     # Uncomment the admin/doc line below to enable admin documentation:

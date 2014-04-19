@@ -1,3 +1,4 @@
+from config import SECRET_KEY, APP_SECRET
 # Django settings for wedding project.
 
 DEBUG = True
@@ -29,7 +30,7 @@ DATABASES = {
 ALLOWED_HOSTS = ['*']
 
     # Parse database configuration from $DATABASE_URL
-if(DEBUG != True):
+if not DEBUG:
     import dj_database_url
     DATABASES['default'] =  dj_database_url.config()
 
@@ -85,7 +86,6 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '1g$icjrpx3a@@anc_l^mt!yle#e)y0^6kbo67*=zs#vl1+3n7!'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -136,6 +136,7 @@ INSTALLED_APPS = (
     'django_google_maps',
     'django_user_agents',
     'south',
+    'django_facebook',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -166,3 +167,20 @@ LOGGING = {
         },
     }
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'django_facebook.context_processors.facebook',
+)
+
+AUTHENTICATION_BACKENDS = (
+    'django_facebook.auth_backends.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
