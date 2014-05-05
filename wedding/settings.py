@@ -1,4 +1,4 @@
-from config import SECRET_KEY, APP_SECRET
+from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
 # Django settings for wedding project.
 
 DEBUG = True
@@ -136,7 +136,8 @@ INSTALLED_APPS = (
     'django_google_maps',
     'django_user_agents',
     'south',
-    'django_facebook',
+    'socialregistration',
+    'socialregistration.contrib.facebook',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -181,6 +182,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'django_facebook.auth_backends.FacebookBackend',
+    'socialregistration.contrib.facebook.auth.FacebookAuth',
     'django.contrib.auth.backends.ModelBackend',
 )
