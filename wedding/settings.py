@@ -1,3 +1,4 @@
+import os
 
 try:
     from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
