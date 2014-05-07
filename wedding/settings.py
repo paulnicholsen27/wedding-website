@@ -1,7 +1,15 @@
-from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
+
+try:
+    from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
+    DEBUG = True
+except ImportError:
+    DEBUG = False
+    SECRET_KEY = os.environ['SECRET_KEY']
+    FACEBOOK_APP_ID = os.environ['FACEBOOK_APP_ID']
+    FACEBOOK_SECRET_KEY = os.environ['FACEBOOK_SECRET_KEY']
+
 # Django settings for wedding project.
 
-DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
