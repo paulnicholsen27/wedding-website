@@ -1,4 +1,3 @@
-import os
 
 try:
     from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
@@ -142,7 +141,7 @@ INSTALLED_APPS = (
     'django_user_agents',
     'south',
     'socialregistration',
-    'socialregistration.contrib.facebook',
+    'socialregistration.contrib.facebook'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -186,6 +185,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 AUTHENTICATION_BACKENDS = (
-    'socialregistration.contrib.facebook.auth.FacebookAuth',
     'django.contrib.auth.backends.ModelBackend',
+    'socialregistration.contrib.facebook.auth.FacebookAuth',
 )
