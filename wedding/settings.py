@@ -1,16 +1,6 @@
-import os
-
-try:
-    from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
-    DEBUG = True
-except ImportError:
-    DEBUG = True
-    SECRET_KEY = os.environ['SECRET_KEY']
-    FACEBOOK_APP_ID = os.environ['FACEBOOK_APP_ID']
-    FACEBOOK_SECRET_KEY = os.environ['FACEBOOK_SECRET_KEY']
-
 # Django settings for wedding project.
 
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -39,9 +29,9 @@ DATABASES = {
 ALLOWED_HOSTS = ['*']
 
     # Parse database configuration from $DATABASE_URL
-if not DEBUG:
+if(DEBUG != True):
     import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+    DATABASES['default'] =  dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -70,8 +60,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = \
-    '/Users/paulnichols/code/wedding/mainsite/static/images/photoalbum/'
+MEDIA_ROOT = '/Users/paulnichols/code/wedding/mainsite/static/images/photoalbum/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -84,7 +73,7 @@ STATIC_ROOT = 'mainsite/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+       os.path.join(BASE_DIR, 'staticfiles'),
 )
 
 # List of finder classes that know how to find static files in
@@ -92,14 +81,17 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
+SECRET_KEY = '1g$icjrpx3a@@anc_l^mt!yle#e)y0^6kbo67*=zs#vl1+3n7!'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,6 +111,9 @@ ROOT_URLCONF = 'wedding.urls'
 WSGI_APPLICATION = 'wedding.wsgi.application'
 
 TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
     'mainsite/templates',
     'quiz/templates',
     'photoalbum/templates',
@@ -141,8 +136,6 @@ INSTALLED_APPS = (
     'django_google_maps',
     'django_user_agents',
     'south',
-    'socialregistration',
-    'socialregistration.contrib.facebook',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -173,19 +166,3 @@ LOGGING = {
         },
     }
 }
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.tz',
-    'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
-)
-
-AUTHENTICATION_BACKENDS = (
-    'socialregistration.contrib.facebook.auth.FacebookAuth',
-    'django.contrib.auth.backends.ModelBackend',
-)
