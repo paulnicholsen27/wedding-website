@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 
 var current_date;
-var target_date = new Date("September 27, 2014 16:30:00").getTime();
+var target_date = new Date("September 27, 2014 15:00:00").getTime();
 var days, hours, minutes, seconds, milliseconds;
 var countdown = document.getElementById("countdown");
 // var days_div = document.getElementById("days");
