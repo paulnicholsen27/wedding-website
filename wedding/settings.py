@@ -30,8 +30,13 @@ ALLOWED_HOSTS = ['*']
 
     # Parse database configuration from $DATABASE_URL
 if not DEBUG:
-    import dj_database_url
-    DATABASES['default'] = dj_database_url.config()
+    print 'debug off'
+    try:
+
+        import dj_database_url
+        DATABASES['default'] = dj_database_url.config()
+    except Exception as e:
+        print e
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
