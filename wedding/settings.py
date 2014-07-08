@@ -1,6 +1,6 @@
 # Django settings for wedding project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -29,9 +29,9 @@ DATABASES = {
 ALLOWED_HOSTS = ['*']
 
     # Parse database configuration from $DATABASE_URL
-if(DEBUG != True):
+if not DEBUG:
     import dj_database_url
-    DATABASES['default'] =  dj_database_url.config()
+    DATABASES['default'] = dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
