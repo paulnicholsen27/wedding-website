@@ -31,10 +31,11 @@ ALLOWED_HOSTS = ['*']
     # Parse database configuration from $DATABASE_URL
 if not DEBUG:
     print 'debug off'
+    # import pdb; pdb.set_trace()
     try:
 
         import dj_database_url
-        DATABASES['default'] = dj_database_url.config()
+        DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
     except Exception as e:
         print e
 
