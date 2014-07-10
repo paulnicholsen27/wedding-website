@@ -1,16 +1,3 @@
-# <<<<<<< HEAD
-
-# try:
-#     from config import SECRET_KEY, FACEBOOK_SECRET_KEY, FACEBOOK_APP_ID
-#     DEBUG = True
-# except ImportError:
-#     DEBUG = False
-#     SECRET_KEY = os.environ['SECRET_KEY']
-#     FACEBOOK_APP_ID = os.environ['FACEBOOK_APP_ID']
-#     FACEBOOK_SECRET_KEY = os.environ['FACEBOOK_SECRET_KEY']
-
-# =======
-# >>>>>>> 2215bd1ece07acedc9079715775ca229272bc7f8
 # Django settings for wedding project.
 
 DEBUG = True
@@ -153,11 +140,6 @@ INSTALLED_APPS = (
     'django_google_maps',
     'django_user_agents',
     'south',
-<<<<<<< HEAD
-    'socialregistration',
-    'socialregistration.contrib.facebook'
-=======
->>>>>>> 2215bd1ece07acedc9079715775ca229272bc7f8
 )
 
 # A sample logging configuration. The only tangible logging
@@ -188,22 +170,3 @@ LOGGING = {
         },
     }
 }
-<<<<<<< HEAD
-
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.media',
-    'django.core.context_processors.static',
-    'django.core.context_processors.tz',
-    'django.core.context_processors.request',
-    'django.contrib.messages.context_processors.messages',
-)
-
-AUTHENTICATION_BACKENDS = (
-    'django.contrib.auth.backends.ModelBackend',
-    'socialregistration.contrib.facebook.auth.FacebookAuth',
-)
-=======
->>>>>>> 2215bd1ece07acedc9079715775ca229272bc7f8
