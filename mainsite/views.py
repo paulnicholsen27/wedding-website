@@ -29,6 +29,9 @@ def story(request):
 
 
 def guestbook(request):
+	import logging
+	logger = logging.getLogger('testlogger')
+	logger.info('This is a simple log message')
 	messages = Message.objects.all().order_by('-date')
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
