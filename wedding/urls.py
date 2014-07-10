@@ -5,11 +5,14 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'wedding.views.home', name='home'),
+    # url(r'^wedding/', include('wedding.foo.urls')),
+
     url(r'^$', 'mainsite.views.base', name='base'),
     url(r'^quiz/$', 'quiz.views.quiz', name='quiz'),
     url(r'^results/$', 'quiz.views.results', name='results'),
-    url(r'^wedding_party/$', 'mainsite.views.wedding_party',
-        name='wedding_party'),
+    url(r'^wedding_party/$', 'mainsite.views.wedding_party', name='wedding_party'),
     url(r'^location/$', 'mainsite.views.location', name='location'),
     url(r'^story/$', 'mainsite.views.story', name='story'),
     url(r'^high_scores/$', 'quiz.views.high_scores', name='high_scores'),
@@ -18,8 +21,7 @@ urlpatterns = patterns('',
     url(r'^map/$', 'mainsite.views.map', name='map'),
     url(r'^afterparty/$', 'mainsite.views.afterparty', name='afterparty'),
     url(r'^lodging/$', 'mainsite.views.lodging', name='lodging'),
-    url(r'^social/', include('socialregistration.urls',
-        namespace='socialregistration')),
+
     # url(r'^login/$', 'mainsite.views.base', name='login'),
     # url(r'^newuser/$', 'mainsite.views.base', name='newuser'),
     # Uncomment the admin/doc line below to enable admin documentation:

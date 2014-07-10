@@ -35,7 +35,7 @@ def guestbook(request):
 		message = request.POST.get('message', None)
 		spam = request.POST.get('spam_catcher', None)
 		print name, message, spam
-		if spam:
+		if spam or 'href' in message:
 			print 'spam found'
 			return redirect('http://www.law.cornell.edu/wex/inbox/state_anti-spam_laws')
 		form = MessageForm(request.POST)

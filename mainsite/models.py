@@ -9,7 +9,7 @@ class User(models.Model):
 		return self.name
 
 class Message(models.Model):
-	name = models.CharField(max_length=200)
+	name = models.CharField(max_length=256)
 	message = models.TextField()
 	response = models.TextField(blank=True, null=True)
 	date = models.DateTimeField(auto_now_add=True)
@@ -18,5 +18,4 @@ class Message(models.Model):
 	def __unicode__(self):
 		return "{0} said '{1}'".format(self.name, self.message)
 
-AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
-AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
+	

@@ -1,5 +1,4 @@
-wedding/config.py
-
+<<<<<<< HEAD
 # Compiled source #
 ###################
 *.com
@@ -39,6 +38,7 @@ wedding/config.py
 .Trashes
 ehthumbs.db
 Thumbs.db
+=======
 *.py[cod]
 
 # C extensions
@@ -74,3 +74,4 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+>>>>>>> fb61a3114b89a7f1427d475249cd55121f08b890
