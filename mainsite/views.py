@@ -36,7 +36,7 @@ def guestbook(request):
 	try:
 		logger.info('attempting to get messages')
 		messages = Message.objects.all().order_by('-date')
-		logger.info('messages loaded')
+		logger.info('messages loaded:',)
 	except Exception as e:
 		logger.info('!!!' + e)
 		return render_to_response(e, {}, RequestContext(request))
@@ -55,7 +55,7 @@ def guestbook(request):
 				#prevents duplicate entries
 				message = form.save()
 	logger.info('about to return')
-	return render_to_response("guestbook.html", {'messages':messages}, RequestContext(request))
+	return render_to_response("guestbook.html", {}, RequestContext(request))
 
 
 
