@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 try:
 
     import dj_database_url
-    DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+    DATABASES['default'] =  dj_database_url.config()
 except Exception as e:
     print e
 
