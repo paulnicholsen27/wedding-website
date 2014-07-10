@@ -74,4 +74,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
->>>>>>> fb61a3114b89a7f1427d475249cd55121f08b890
+
+local_settings.py
+*.sqlite3
