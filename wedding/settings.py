@@ -27,15 +27,15 @@ if DEBUG:
     }
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-else:   
+else:
     ALLOWED_HOSTS = ['*']
 
-    # Parse database configuration from $DATABASE_URL
-    # import pdb; pdb.set_trace()
+        # Parse database configuration from $DATABASE_URL
+        # import pdb; pdb.set_trace()
     try:
 
         import dj_database_url
-        DATABASES['default'] =  dj_database_url.config()
+        DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
     except Exception as e:
         print e
 
