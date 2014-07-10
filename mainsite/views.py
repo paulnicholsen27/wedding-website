@@ -5,6 +5,9 @@ from django.contrib.auth import authenticate,login
 from models import Message
 from forms import MessageForm
 
+import logging
+logger = logging.getLogger('testlogger')
+
 def base(request):
 	warning_given = request.session.get('browser_warning', False)
 	answer = request.user_agent.browser.family
@@ -30,26 +33,26 @@ def story(request):
 
 def guestbook(request):
 	try:
-
 		messages = Message.objects.all().order_by('-date')
-		if request.method == 'POST':
-			name = request.POST.get('name', None)
-			message = request.POST.get('message', None)
-			spam = request.POST.get('spam_catcher', None)
-			print name, message, spam
-			if spam or 'href' in message:
-				print 'spam found'
-				return redirect('http://www.law.cornell.edu/wex/inbox/state_anti-spam_laws')
-			form = MessageForm(request.POST)
-			if form.is_valid():
-				if not Message.objects.filter(name=name, message=message):
-					#prevents duplicate entries
-					message = form.save()
-		return render_to_response("guestbook.html", {'messages':messages}, RequestContext(request))
 	except Exception as e:
-		import logging
-		logger = logging.getLogger('testlogger')
-		logger.info('!!!!' + e)
+		logger.info('!!!' + e)
+		return render_to_response(e, {}, RequestContext(request))
+	if request.method == 'POST':
+		name = request.POST.get('name', None)
+		message = request.POST.get('message', None)
+		spam = request.POST.get('spam_catcher', None)
+		print name, message, spam
+		if spam or 'href' in message:
+			print 'spam found'
+			return redirect('http://www.law.cornell.edu/wex/inbox/state_anti-spam_laws')
+		form = MessageForm(request.POST)
+		if form.is_valid():
+			if not Message.objects.filter(name=name, message=message):
+				#prevents duplicate entries
+				message = form.save()
+	return render_to_response("guestbook.html", {'messages':messages}, RequestContext(request))
+
+
 
 def map(request):
 	return render_to_response("map.html", {}, RequestContext(request))
