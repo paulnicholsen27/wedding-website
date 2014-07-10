@@ -9,33 +9,35 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        # 'NAME': 'django_app_1',
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'wedding.db',
-        # The rest is not used with sqlite3:
-        # 'USER': 'paulnichols',
-        # 'PASSWORD': 'ella27',
-        # 'HOST': 'localhost',
-        # 'PORT': '5432',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            # 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            # 'NAME': 'django_app_1',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'wedding.db',
+            # The rest is not used with sqlite3:
+            # 'USER': 'paulnichols',
+            # 'PASSWORD': 'ella27',
+            # 'HOST': 'localhost',
+            # 'PORT': '5432',
 
+        }
     }
-}
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ['*']
+else:   
+    ALLOWED_HOSTS = ['*']
 
     # Parse database configuration from $DATABASE_URL
     # import pdb; pdb.set_trace()
-try:
+    try:
 
-    import dj_database_url
-    DATABASES['default'] =  dj_database_url.config()
-except Exception as e:
-    print e
+        import dj_database_url
+        DATABASES['default'] =  dj_database_url.config()
+    except Exception as e:
+        print e
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
