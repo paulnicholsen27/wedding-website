@@ -5,9 +5,6 @@ from django.contrib.auth import authenticate,login
 from models import Message
 from forms import MessageForm
 
-import logging
-logger = logging.getLogger('testlogger')
-
 def base(request):
 	warning_given = request.session.get('browser_warning', False)
 	answer = request.user_agent.browser.family
@@ -32,15 +29,7 @@ def story(request):
 
 
 def guestbook(request):
-	logger.info('guestbook called')
-	try:
-		logger.info('attempting to get messages')
-		messages = Message.objects.all().order_by('-date')
-		logger.info('messages loaded:',)
-	except Exception as e:
-		logger.info('!!!' + e)
-		return render_to_response(e, {}, RequestContext(request))
-	logger.info('escaped try block')
+	messages = Message.objects.all().order_by('-date')
 	if request.method == 'POST':
 		name = request.POST.get('name', None)
 		message = request.POST.get('message', None)
@@ -54,9 +43,7 @@ def guestbook(request):
 			if not Message.objects.filter(name=name, message=message):
 				#prevents duplicate entries
 				message = form.save()
-	logger.info('about to return')
-	return render_to_response("guestbook.html", {}, RequestContext(request))
-
+	return render_to_response("guestbook.html", {'messages':messages}, RequestContext(request))
 
 
 def map(request):
