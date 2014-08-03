@@ -348,6 +348,22 @@ padding:2px;t
 	margin: 20px 30px 20px 0px; 
 	padding: 0}
 
+.question{
+	font-size: 18px; 
+	margin: 20px 30px 20px 0px; 
+	padding: 0;
+	line-height: 1.4;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.answer{
+	font-size: 20px;
+	margin: 20px 30px 20px 20px;
+	font-weight: bold;
+	line-height: 1.4;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
 	.quiz_answer{
 		font-size: 14px; 
 		margin: 0 0 2px; 

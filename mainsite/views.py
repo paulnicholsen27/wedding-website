@@ -15,6 +15,8 @@ def base(request):
 		explorer = False
 	return render_to_response("base.html", {'explorer':explorer, 'answer':answer}, RequestContext(request))
 
+def faq(request):
+	return render_to_response("faq.html", {}, RequestContext(request))
 
 def wedding_party(request):
 	return render_to_response("weddingparty.html", {}, RequestContext(request))

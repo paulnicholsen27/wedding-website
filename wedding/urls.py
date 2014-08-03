@@ -21,6 +21,7 @@ urlpatterns = patterns('',
     url(r'^map/$', 'mainsite.views.map', name='map'),
     url(r'^afterparty/$', 'mainsite.views.afterparty', name='afterparty'),
     url(r'^lodging/$', 'mainsite.views.lodging', name='lodging'),
+    url(r'^faq/$', 'mainsite.views.faq', name='faq'),
 
     # url(r'^login/$', 'mainsite.views.base', name='login'),
     # url(r'^newuser/$', 'mainsite.views.base', name='newuser'),
