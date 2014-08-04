@@ -1,5 +1,7 @@
 # Django settings for wedding project.
 
+from config import SECRET_KEY
+
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
@@ -100,7 +102,6 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '1g$icjrpx3a@@anc_l^mt!yle#e)y0^6kbo67*=zs#vl1+3n7!'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
