@@ -851,3 +851,9 @@ label {
 .italic {
 	font-style: italic;
 }
+
+#after_party{
+	margin: 10px 60px 0 60px;
+	text-align: center;
+	color: blue;
+}
