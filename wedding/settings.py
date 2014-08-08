@@ -38,7 +38,7 @@ if DEBUG:
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
 else:
     ALLOWED_HOSTS = ['*']
-
+    SECRET_KEY = os.environ['SECRET_KEY']
         # Parse database configuration from $DATABASE_URL
         # import pdb; pdb.set_trace()
     try:
