@@ -1,5 +1,5 @@
 # Django settings for wedding project.
-
+import os
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
