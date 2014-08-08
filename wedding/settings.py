@@ -1,6 +1,5 @@
 # Django settings for wedding project.
 
-from config import SECRET_KEY
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -36,8 +35,9 @@ if DEBUG:
     }
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-else:
+else: #running locally
     ALLOWED_HOSTS = ['*']
+    from config import SECRET_KEY
 
         # Parse database configuration from $DATABASE_URL
         # import pdb; pdb.set_trace()
