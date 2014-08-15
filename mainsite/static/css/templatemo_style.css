@@ -857,3 +857,7 @@ label {
 	text-align: center;
 	color: blue;
 }
+
+.strong {
+  font-weight: bold;
+}
