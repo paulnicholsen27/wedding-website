@@ -639,14 +639,15 @@ padding:2px;t
 div #photo_album_caption, div #photo_album_title{
 	text-align: center;
 }
-#welcome {
+.welcome {
 	color: #933; 
 	font-weight: normal; 
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 20px;
 	padding: 0 40px;
 	text-align: justify;
-	line-height: 30px
+	line-height: 30px;
+	margin-bottom: 15px;
 
 }
 
@@ -860,4 +861,8 @@ label {
 
 .strong {
   font-weight: bold;
+}
+
+.heading {
+	color: #000000; text-decoration: underline;
 }
